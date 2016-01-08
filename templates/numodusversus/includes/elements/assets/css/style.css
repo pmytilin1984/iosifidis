@@ -1,0 +1,384 @@
+/**
+ * @version     1.0.1 (May 8th, 2014
+ * @package     Akhtarma
+ * @author      Nuevvo - http://nuevvo.com
+ * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
+ * @license     http://nuevvo.com/license
+ */
+
+/* Base
+----------------------------------------------------- */
+.clr {clear:both;}
+
+@font-face {
+  font-family: 'entypoftp';
+  src: url('http://cdn.nuevvo.net/webfonts/entypoftp/font/entypoftp.eot?7184180');
+  src: url('http://cdn.nuevvo.net/webfonts/entypoftp/font/entypoftp.eot?7184180#iefix') format('embedded-opentype'),
+       url('http://cdn.nuevvo.net/webfonts/entypoftp/font/entypoftp.woff?7184180') format('woff'),
+       url('http://cdn.nuevvo.net/webfonts/entypoftp/font/entypoftp.ttf?7184180') format('truetype'),
+       url('http://cdn.nuevvo.net/webfonts/entypoftp/font/entypoftp.svg?7184180#entypoftp') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Hide icon fonts while they load */
+.wf-loading [class^="icon-"], [class*=" icon-"] {visibility:hidden;}
+.wf-active [class^="icon-"], [class*=" icon-"] {visibility:visible;}
+
+/* Joomla! 3.x Container fixes */
+#options div.accordion-group {border:none;margin:0;}
+#options div.accordion-heading {display:none;}
+#options div.accordion-inner {padding:0;border:none;}
+#options div.control-label {display:none;}
+#options div.controls {margin:0 !important;}
+
+/* Joomla! 2.5 Container fixes */
+.panel {border:none !important;}
+.panel h3.title {display:none;}
+.panel fieldset {border:none !important;margin:0 !important;padding:0 !important;}
+input#jform_title {width:250px;}
+div.width-40 {width:60% !important;}
+div.width-60 {width:40% !important;}
+
+.pane-slider,
+fieldset.panelform {overflow:visible!important;}
+
+/* Settings container */
+.nuTmplParamsContainer {padding:0 10px 10px 10px;background:#f4f4f4;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;}
+
+/* Settings title */
+div.nuSettingsTitle {padding:0;border-top:2px solid #7dbce6;border-top-left-radius:4px;border-top-right-radius:4px;background-color:#184c72;background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#2d97de), to(#206c9e));background-image:-webkit-linear-gradient(top, #2d97de, #206c9e);background-image:-moz-linear-gradient(top, #2d97de, #206c9e);background-image:-ms-linear-gradient(top, #2d97de, #206c9e);background-image:-o-linear-gradient(top, #2d97de, #206c9e);position:relative;}
+div.nuSettingsTitle i {display:block;width:60px;height:60px;float:left;background:url(../images/nuevvo.png) center center no-repeat;}
+div.nuSettingsTitle span {display:block;height:60px;float:left;clear:right;color:#ffffff;font-size:24px;text-shadow:0px 1px #1b5a84;line-height:60px;}
+div.nuSettingsTitle a.nuHelpLink:after {display:block;width:23px;height:23px;top:19px;right:28px;position:absolute;font-family:'entypoftp';content:'\e806';color:#fff;font-size:23px;line-height:1;}
+div.nuSettingsTitle a.nuHelpLink:hover {opacity:0.6;}
+.nuClear {float:none;clear:both;}
+
+table.nuTmplParams {width:100%;background:#fff;border-collapse:collapse;}
+table.nuTmplParams tr {border:0;}
+table.nuTmplParams tr td {background:#ffffff;}
+table.nuTmplParams tr td label {float:none !important;font-weight:bold;font-size:13px;color:#333333;padding:0;display:inline-block;}
+table.nuTmplParams tr td input,
+table.nuTmplParams tr td textarea {float:none !important;border:1px solid #bdc3c7;border-radius:4px;font-size:13px;padding:10px;color:#393939;box-shadow:0 1px 1px #e5e5e5;font-family:Arial, Helvetica, sans-serif;height:auto;}
+table.nuTmplParams tr td input {max-height:36px;}
+table.nuTmplParams tr td select {float:none !important;border:1px solid #bdc3c7;border-radius:4px;font-size:13px;color:#393939;margin:0;padding:4px;box-shadow:0 1px 1px #e5e5e5;font-family:Arial, Helvetica, sans-serif;min-height:34px;line-height:34px;}
+table.nuTmplParams tr td select.multipleList {height:auto;}
+
+/* Headers */
+table.nuTmplParams tr.nuHeaderRow {border:none;}
+table.nuTmplParams tr td.nuHeader {border:none;border-bottom:3px solid #2d97de;padding-bottom:0;}
+table.nuTmplParams tr td.nuHeader div.nuHeaderInner {background:#fff;padding:40px 20px 8px 0;}
+table.nuTmplParams tr:first-of-type td.nuHeader  div.nuHeaderInner {padding-top:0px;}
+table.nuTmplParams tr td.nuHeader h3 {font-size:20px !important;font-weight:400;line-height:1.3;color:#2d97de !important;margin:0 !important;padding:0!important;background:#fff;}
+table.nuTmplParams tr td.nuHeader h3:before {font-family:'entypoftp';font-size:22px;color:#2d97de;font-style:normal;font-weight:normal;speak:none;font-variant:normal;text-transform:none;display:inline-block;width:30px;padding-right:1px;text-align:left;content:'\e803';line-height:1;}
+table.nuTmplParams tr td.nuHeader div.nuHeaderSiteLogo h3:before {content:'\e801';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderColors h3:before {content:'\e813';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderHighlights h3:before {content:'\e800';font-size:28px;}
+table.nuTmplParams tr td.nuHeader div.nuHeaderCredits h3:before {content:'\e807';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderAnalytics h3:before {content:'\e812';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderSEO h3:before {content:'\e807';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderMeta h3:before {content:'\e805';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderInfo h3:before {content:'\e805';font-size:25px;}
+table.nuTmplParams tr td.nuHeader div.nuHeaderJquery h3:before {content:'\e807';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderSocialLinks h3:before {content:'\e804';}
+table.nuTmplParams tr td.nuHeader div.nuHeaderCustomCode h3:before {content:'\e802';}
+
+table.nuTmplParams tr td.nuHeader span {color:#999;font-size:11px;display:block;line-height:14px;max-width:600px;margin:5px 0 0;}
+
+table.nuTmplParams .nuButton {display:inline-block;color:#fefefe;font-size:14px;border-radius:4px;cursor:pointer;text-decoration:none;}
+table.nuTmplParams .nuButton:hover {text-decoration:none;}
+table.nuTmplParams .nuAddButton {background-color:#1bb05d;background-image:url(../images/add.png);background-position:7px;background-repeat:no-repeat;}
+
+/* Field:Highlights */
+table.nuTmplParams #nuHighlights {padding-top:10px;}
+table.nuTmplParams #nuHighlights textarea,
+table.nuTmplParams #nuHighlights input {width:100%;box-shadow:0 1px 0 rgba(0,0,0,.1);border:1px solid #bdc3c7;}
+table.nuTmplParams #nuHighlights input {margin:0;}
+table.nuTmplParams #nuHighlights textarea {margin-top:12px;margin-bottom:0;}
+table.nuTmplParams #nuHighlights label {display:block;color:#333;margin:12px 0;font-size:13px;}
+table.nuTmplParams #nuHighlights .nuHighlightInner .input-prepend input {width:218px;} /* Joomla! 3.0 + */
+table.nuTmplParams #nuHighlights .nuHighlightInner .fltlft input {width:190px;} /* Joomla! 2.5 */
+table.nuTmplParams #nuHighlights .nuHighlightInner input,
+table.nuTmplParams #nuHighlights .nuHighlightInner textarea {margin-bottom:4px;}
+table.nuTmplParams #nuHighlights .nuRemoveButton {position:absolute;top:0;right:0;}
+table.nuTmplParams #nuHighlights .nuHighlight {position:relative;margin-top:20px;}
+table.nuTmplParams #nuHighlights .nuHighlightInner {padding:12px;background:#f3f3f3;border-radius:4px 0 4px 4px;}
+table.nuTmplParams #nuHighlights .nuRemoveButton {display:block;width:36px;height:58px;margin:0;padding:0;background:#f3f3f3;border-radius:0 4px 4px 0;cursor:pointer;text-align:center;}
+table.nuTmplParams #nuHighlights .nuRemoveButton:after,
+table.nuTmplParams #nuCategoryColors .nuRemoveButton:after {font-family:'entypoftp';display:inline-block;vertical-align:middle;text-align:center;line-height:58px;font-size:22px;color:#787878;content:'\e80a';}
+table.nuTmplParams #nuHighlights .nuRemoveButton:after:hover {color:#2d97de;}
+#nuHighlights label#nuHighlightsFamilySelect {display:inline-block;max-width:220px!important;}
+select#nuHighlightsFont {min-width:230px;margin-left:20px;margin-bottom:20px;}
+.nuHighlightIconsList {width:372px;height:191px;padding:8px;border:1px solid #bdc3c7;border-radius:4px;background-color:#f3f3f3;box-shadow:0 1px 0 rgba(0,0,0,.1);overflow:auto;resize:both;position:absolute;z-index:9999;margin:59px 0 0;}
+html.wf-loading .nuHighlightIconsList,
+.nuHighlightIconsListLoading {background:#f3f3f3 scroll url(../images/preloader.gif) no-repeat 50% 50%;overflow:hidden;}
+.nuHighlightsIconContainer [class^="icon"]:before,
+.nuHighlightsIconContainer [class*=" icon"]:before {font-size:16px;line-height:31px;}
+.nuHighlightsIconContainer i {margin:4px;border-radius:4px;display:inline-block;vertical-align:middle;
+width:31px;color:#333;font-size:16px;height:31px;text-align:center;line-height:31px;border:1px solid #bdc3c7;border-radius:4px;background-color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.1);}
+.nuHighlightsIconContainer { /* position: relative; */ }
+.nuHighlightsIconContainer i:hover {color:#fff;background:#2d97de;cursor:pointer;}
+.nuHighlightIconsListHidden {display:none;}
+table.nuTmplParams .nuHighlightsImageContainer label {float:left!important;min-width:40px;max-width:none;}
+table.nuTmplParams .nuHighlightsIconContainer label {float:left!important;height:30px;line-height:34px;min-width:40px;max-width:none;}
+table.nuTmplParams .nuHighlightsImageContainer,
+table.nuTmplParams .nuHighlightsIconContainer {display:block;clear:both;}
+table.nuTmplParams .nuHighlightsImageContainer .nuImage {margin: 4px 0 0 46px;}
+
+a.nuHighlightSelectIconButton,
+a.nuHighlightSelectIconButton:visited {float:left;padding:0 15px;color:#333;font-size:13px;font-family:"Lucida Grande",sans-serif;height:30px;line-height:30px;display:block;margin:12px 0 0 6px;border:1px solid rgba(79,79,79,.5);border-radius:5px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);background-image:-moz-linear-gradient(bottom, #efefef 0%, #ebebeb 49.1%, #f3f3f3 50%, #fff 100%);background-image:-o-linear-gradient(bottom, #efefef 0%, #ebebeb 49.1%, #f3f3f3 50%, #fff 100%);background-image:-webkit-linear-gradient(bottom, #efefef 0%, #ebebeb 49.1%, #f3f3f3 50%, #fff 100%);background-image:linear-gradient(bottom, #efefef 0%, #ebebeb 49.1%, #f3f3f3 50%, #fff 100%);}
+a.nuHighlightSelectIconButton:hover {text-decoration:none;box-shadow:inset 0 0 5px 5px rgba(255,255,255,.5);}
+.nuHighlightsIconPreview i {margin:12px 0 0 6px;float:left;}
+/* show a notice if the user hasn't selected an icon font-family */
+.nuHighlightFontNotice {font-size:10px;float:left;line-height:34px;margin:12px;font-style:italic;display:none;color:#999;}
+	.nuHighlightsIconsDisabled .nuHighlightFontNotice {display:block;}
+	.nuHighlightsIconsDisabled  a.nuHighlightSelectIconButton {opacity:0.5;}
+table.nuTmplParams .nuButton {padding:13px 7px 10px 33px;}
+table.nuTmplParams select {max-width:100px;}
+table.nuTmplParams #nuAddJCategoryButton {margin-right:5px;}
+table.nuTmplParams #nuHighlights .nuHighlight {max-width:320px;}
+table.nuTmplParams #nuHighlights .nuHighlightInner {width:270px;}
+table.nuTmplParams #nuCategoryColors .nuRemoveButton {width:20px;}
+table.nuTmplParams #nuCategoryColors .nuTemplateColor {max-width:273px;}
+fieldset.panelform label,
+fieldset.panelform div.paramrow label,
+fieldset.panelform span.faux-label {max-width:100%!important;}
+
+/* Image selector (used standalone or inside Highlights */
+a.nuImageClearButton, a.nuImageModalButton {font-weight:bold;color:#fff;background:#2d97de;border-radius:4px !important;margin:0 5px;text-shadow:0 0 transparent;float:left;line-height:1.2;}
+a.nuImageModalButton,
+a.nuImageModalButton:visited {font-size:13px;color:#fff;padding:10px 17px 11px!important;}
+a.nuImageModalButton:hover {text-decoration:none;cursor:pointer;}
+a.nuImageClearButton,
+a.nuImageClearButton:visited {background:#696969;color:#fff;padding:6px 17px 5px!important;min-height:25px;line-height:24px;}
+.nuImage input[type="text"] {max-width:158px;margin:0 5px 0 0!important;float:left!important;width:158px;}
+a.nuImageClearButton .icon-remove:before {font-family:'entypoftp';display:inline-block;vertical-align:middle;text-align:center;color:#fff;content:'\e80a';font-size:22px;font-style:normal;font-weight:normal;}
+.nuImagePreviewButton {display:inline-block;vertical-align:middle;margin:8px 0;cursor:pointer;}
+.nuImagePreviewButton .icon-eye:before {font-family:'entypoftp';display:inline-block;vertical-align:middle;text-align:center;color:#2d97de;font-size:22px;font-style:normal;font-weight:normal;content:'\e809';margin:0 5px;}
+
+/* Field:Category Colors */
+table.nuTmplParams #nuCategoryColors {padding-top:10px;}
+table.nuTmplParams #nuAddJCategoryButton {background-image:url(../images/addjcategory.png);margin-bottom:10px;}
+table.nuTmplParams #nuAddK2CategoryButton {background-image:url(../images/addk2category.png);margin-bottom:10px;}
+table.nuTmplParams #nuCategoryColors .nuTemplateColor {border-radius:4px;margin-bottom:2px;padding:12px 10px 10px 50px;}
+table.nuTmplParams #nuCategoryColors .nuJCategory {background:url(../images/com_content.png) 14px 19px no-repeat #f3f3f3;}
+table.nuTmplParams #nuCategoryColors .nuK2Category {background:url(../images/com_k2.png) 14px 19px no-repeat #f3f3f3;}
+table.nuTmplParams #nuJCategoryPlaceholder,
+table.nuTmplParams #nuK2CategoryPlaceholder,
+table.nuTmplParams #nuHighlightPlaceholder {display:none;}
+table.nuTmplParams #nuCategoryColors .nuRemoveButton {display:block;float:right;clear:both;height:34px;margin:0;padding:0;cursor:pointer;#f3f3f3;text-align:center;}
+table.nuTmplParams #nuCategoryColors .nuRemoveButton:after {line-height:34px;}
+table.nuTmplParams #nuCategoryColors .nuRemoveButton:after:hover {color:#2d97de;}
+table.nuTmplParams .minicolors-swatch {border:1px solid #babec3;width:32px !important;height:32px !important;margin-right:8px !important;}
+table.nuTmplParams .minicolors-input {padding:0 13px 0 13px !important;width:90px !important;height:34px !important;line-height:34px !important;}
+
+/* Fields */
+td.nuLabel {}
+td.nuField {}
+.nuFieldTextPrefix {margin-right:5px;min-width:175px;display:inline-block;vertical-align:middle;font-size:13px;color:#999;text-align:right;}
+#nutpGAID {min-width:30px;width:30px;}
+.aceEditorBlock {width:98%;height:300px;margin: 12px 0 20px;}
+
+/* Joomla! 2.5 fixes */
+#minwidth-body div.panel fieldset {background:#f4f4f4;}
+#minwidth-body table.nuTmplParams tr td input {min-height:36px;margin-top:0;margin-bottom:0;}
+#minwidth-body table.nuTmplParams tr td input.minicolors-input {min-height:33px;}
+#minwidth-body .button2-left .blank a,
+#minwidth-body .input-append a.btn, #minwidth-body .input-prepend a.btn {margin:0 5px;padding:7px 17px!important;}
+#minwidth-body .media-preview {margin:6px 5px 0;}
+#minwidth-body table.nuTmplParams tr td.nuHeader span {max-width:100%;}
+
+/* Buttons Select-Clear-Preview for both Joomla! 2.5 & 3.x */
+.button2-left {background:none !important;float:none !important;margin:0 !important;}
+.button2-left .blank {background:none !important;}
+.button2-left .blank a,
+.input-append a.btn,
+.input-prepend a.btn {font-size:13px;font-weight:bold;color:#fff;background:#2d97de;border-radius:4px !important;display:inline-block;margin:5px;padding:10px 20px !important;text-shadow:0 0 transparent;}
+.button2-left .blank a[href="#"],
+.input-append a.btn.hasTooltip,
+.input-prepend a.btn.hasTooltip {background:#696969;}
+.button2-left .blank a:hover,
+.input-append a.btn:hover,
+.input-prepend a.btn:hover {color:#fff !important;}
+.media-preview {margin:18px 5px;}
+.media-preview.add-on {padding:0;}
+.media-preview span {width:30px;height:auto;display:inline-block;padding:2px 0;font:0/0 a;text-shadow:none;color:transparent;}
+.media-preview span:before {display:inline-block;vertical-align:middle;color:#2d97de;font-size:23px;font-family:'entypoftp';content:'\e809';line-height:1;}
+.input-append a.btn,
+.input-prepend a.btn {margin:0 5px;padding:12px 20px !important;}
+.input-append .add-on,
+.input-prepend .add-on {margin:1px 0 !important;background:none !important;border:0 !important;}
+
+/* Mobile first table approach (setting smaller widths to help smaller viewports)  */
+table.nuTmplParams table,
+table.nuTmplParams td,
+table.nuTmplParams input,
+table.nuTmplParams textarea {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+table.nuTmplParams select {max-width:100%;}
+table.nuTmplParams input,
+table.nuTmplParams textarea,
+table.nuTmplParams select,
+table.nuTmplParams #nuHighlights textarea {max-width:270px;}
+table.nuTmplParams input#jform_params_logo_Image {max-width:135px;}
+table.nuTmplParams tr td {display:block;padding:20px 20px 0 0;min-height:30px;}
+table.nuTmplParams tr td.nuField {padding-top:5px;}
+table.nuTmplParams tr td label {display:inline-block;vertical-align:middle;margin:0;}
+table.nuTmplParams tr td textarea {width:100%;max-width:500px;}
+.button2-left .blank a,
+.input-append a.btn,
+.input-prepend a.btn {padding:8px 17px!important;}
+.isJoomla25 table.nuTmplParams tr td { display: block; }
+.isJoomla25 table.nuTmplParams tr td.nuField { display: block; min-width: 90%; }
+.isJoomla3x table.nuTmplParams tr td {display:table-cell;}
+table.nuTmplParams #nuAddJCategoryButton {margin-right:17px;margin-bottom:20px;}
+table.nuTmplParams .nuButton {padding:13px 13px 10px 40px;}
+table.nuTmplParams tr td.nuField {padding:10px 0;}
+
+/* Adjust larger widths */
+table.nuTmplParams #nuCategoryColors .nuTemplateColor {width:400px;max-width:none;}
+table.nuTmplParams #nuHighlights .nuHighlight {width:460px;max-width:none;}
+table.nuTmplParams #nuHighlights .nuHighlightInner {width:390px;max-width:none;overflow:hidden;}
+table.nuTmplParams #nuCategoryColors .nuRemoveButton {width:34px;}
+table.nuTmplParams #nuHighlights .nuRemoveButton {width:54px;}
+
+/* Reset all max-width properties */
+table.nuTmplParams input,
+table.nuTmplParams textarea,
+table.nuTmplParams select,
+table.nuTmplParams #nuHighlights textarea,
+table.nuTmplParams #nuCategoryColors .nuTemplateColor,
+table.nuTmplParams #nuHighlights .nuHighlight,
+table.nuTmplParams #nuHighlights .nuHighlightInner,
+table.nuTmplParams select {max-width:none;}
+table.nuTmplParams input#jform_params_logo_Image {max-width:135px;}
+
+table.nuTmplParams #nuHighlights,
+table.nuTmplParams #nuCategoryColors {padding-top:0;}
+
+/* Joomla! 3.x */
+.container-main table.nuTmplParams tr td:first-child {width:17%;}
+.container-main table.nuTmplParams tr td:last-child {width:83%;}
+
+/* jQuery Tools - Tabs
+----------------------------------------------------- */
+/* root element for tabs  */
+ul#nuParamsTabs {margin:8px 0 0 0 !important;padding:0;float:left;position:relative;z-index:9;}
+ul#nuParamsTabs:after {display:block;content:"";height:4px;background:#fff;bottom:-4px;z-index:99;left:1px;right:1px;position:absolute;}
+/* single tab */
+ul#nuParamsTabs li {float:left;padding:0;margin:0;list-style-type:none;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+/* link inside the tab. uses a background image */
+ul#nuParamsTabs li:first-child a {border-left:1px solid rgba(0,0,0,.07);}
+ul#nuParamsTabs li:last-child a {border-right:1px solid rgba(0,0,0,.07);}
+ul#nuParamsTabs a {float:left;font-size:16px;display:block;padding:14px 30px 14px;text-decoration:none;background-color:#b5b5b5;color:#f4f4f4;margin-right:0;outline:0;border-top:3px solid #696969;}
+ul#nuParamsTabs a:hover {background-color:#fefefe;color:#333;border-top-color:#2d97de;}
+ul#nuParamsTabs a:active,
+ul#nuParamsTabs a:focus {outline:0;}
+/* selected tab */
+ul#nuParamsTabs a.current {background-color:#fff;color:#000;cursor:default;border-top-color:#2d97de;}
+/* tab pane */
+div#nuParamsPanes {position:relative;z-index:8;clear:both;border:1px solid rgba(0,0,0,.07);box-shadow:0 1px 4px rgba(0,0,0,.08);}
+div#nuParamsPanes div.nuParamsPane {display:none;min-height:150px;padding:0 20px 20px;background-color:#fff;}
+
+/* jQuery Swipebox
+----------------------------------------------------- */
+.swipebox{overflow:hidden !important}#swipebox-overlay img{border:none !important}#swipebox-overlay{width:100%;height:100%;position:fixed;top:0;left:0;z-index:99999 !important;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;user-select:none}#swipebox-slider{height:100%;left:0;top:0;width:100%;white-space:nowrap;position:absolute;display:none}#swipebox-slider .slide{background:url(../images/loader.gif) no-repeat center center;height:100%;width:100%;line-height:1px;text-align:center;display:inline-block}#swipebox-slider .slide:before{content:"";display:inline-block;height:50%;width:1px;margin-right:-1px}#swipebox-slider .slide img{display:inline-block;max-height:100%;max-width:100%;margin:0;padding:0;width:auto;height:auto;vertical-align:middle}#swipebox-action,#swipebox-caption{position:absolute;left:0;z-index:999;height:50px;width:100%}#swipebox-action{bottom:-50px}#swipebox-action.visible-bars{bottom:0}#swipebox-action.force-visible-bars{bottom:0 !important}#swipebox-caption{top:-50px;text-align:center}#swipebox-caption.visible-bars{top:0}#swipebox-caption.force-visible-bars{top:0 !important}#swipebox-action #swipebox-prev,#swipebox-action #swipebox-next,#swipebox-action #swipebox-close{background-image:url(../images/icons.png);background-repeat:no-repeat;border:none !important;text-decoration:none !important;cursor:pointer;position:absolute;width:50px;height:50px;top:0}#swipebox-action #swipebox-close{background-position:15px 12px;left:40px}#swipebox-action #swipebox-prev{background-position:-32px 13px;right:100px}#swipebox-action #swipebox-next{background-position:-78px 13px;right:40px}#swipebox-action #swipebox-prev.disabled,#swipebox-action #swipebox-next.disabled{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);opacity:.3}#swipebox-slider.rightSpring{-moz-animation:rightSpring .3s;-webkit-animation:rightSpring .3s}#swipebox-slider.leftSpring{-moz-animation:leftSpring .3s;-webkit-animation:leftSpring .3s}@-moz-keyframes "rightSpring"{0%{margin-left:0;}50%{margin-left:-30px;}100%{margin-left:0;}}@-moz-keyframes "leftSpring"{0%{margin-left:0;}50%{margin-left:30px;}100%{margin-left:0;}}@-webkit-keyframes "rightSpring"{0%{margin-left:0;}50%{margin-left:-30px;}100%{margin-left:0;}}@-webkit-keyframes "leftSpring"{0%{margin-left:0;}50%{margin-left:30px;}100%{margin-left:0;}}#swipebox-overlay{background:#0d0d0d}#swipebox-action,#swipebox-caption{text-shadow:1px 1px 1px #000;background-color:#0d0d0d;background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,#0d0d0d),color-stop(100%,#000));background-image:-webkit-linear-gradient(#0d0d0d,#000);background-image:-moz-linear-gradient(#0d0d0d,#000);background-image:-o-linear-gradient(#0d0d0d,#000);background-image:linear-gradient(#0d0d0d,#000);-webkit-box-shadow:0 1px 1px 1px #212121,inset 0 1px 1px 1px #000;-moz-box-shadow:0 1px 1px 1px #212121,inset 0 1px 1px 1px #000;box-shadow:0 1px 1px 1px #212121,inset 0 1px 1px 1px #000;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=95);opacity:.95}#swipebox-action{-webkit-box-shadow:0 -1px -1px 1px #212121,inset 0 -1px -1px 1px #000;-moz-box-shadow:0 -1px -1px 1px #212121,inset 0 -1px -1px 1px #000;box-shadow:0 -1px -1px 1px #212121,inset 0 -1px -1px 1px #000}#swipebox-caption{color:#fff !important;font-size:15px;line-height:43px;font-family:Helvetica,Arial,sans-serif}
+#swipebox-slider .slide img {background:url(../images/blank_600x600.png) repeat 0 0;}
+
+/* jQuery Minicolors
+----------------------------------------------------- */
+.minicolors {position:relative;display:inline-block;z-index:1;}
+.minicolors-focus {z-index:2;}
+.minicolors.minicolors-theme-default .minicolors-input {margin:0px;margin-right:3px;border:solid 1px #CCC;font:14px sans-serif;width:65px;height:16px;border-radius:0;box-shadow:inset 0 2px 4px rgba(0, 0, 0, .04);padding:2px;margin-right:-1px;}
+.minicolors-theme-default.minicolors .minicolors-input {vertical-align:middle;outline:none;}
+.minicolors-theme-default.minicolors-swatch-left .minicolors-input {margin-left:-1px;margin-right:auto;}
+.minicolors-theme-default.minicolors-focus .minicolors-input,
+.minicolors-theme-default.minicolors-focus .minicolors-swatch {border-color:#999;}
+.minicolors-hidden {position:absolute;left:-9999em;}
+.minicolors-swatch {position:relative;width:20px;height:20px;text-align:left;background:url(../images/jquery.minicolors.png) -80px 0;border:solid 1px #CCC;vertical-align:middle;display:inline-block;}
+.minicolors-swatch SPAN {position:absolute;width:100%;height:100%;background:none;box-shadow:inset 0 9px 0 rgba(255, 255, 255, .1);display:inline-block;}
+/* Panel */
+.minicolors-panel {position:absolute;top:41px;left:0;width:173px;height:152px;background:white;border-radius:4px;border:solid 4px #333;box-shadow:0 0 20px rgba(0, 0, 0, .2);display:none;}
+.minicolors-panel:after {bottom:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+.minicolors-panel:after{border-color:rgba(51,51,51,0);border-bottom-color:#333333;border-width:10px;left:8%;margin-left:-10px;}
+
+.minicolors-position-top .minicolors-panel {top:-156px;}
+.minicolors-position-left .minicolors-panel {left:-83px;}
+.minicolors-position-left.minicolors-with-opacity .minicolors-panel {left:-104px;}
+.minicolors-with-opacity .minicolors-panel {width:194px;}
+.minicolors .minicolors-grid {position:absolute;top:1px;left:1px;width:150px;height:150px;background:url(../images/jquery.minicolors.png) -120px 0;cursor:crosshair;}
+.minicolors .minicolors-grid-inner {position:absolute;top:0;left:0;width:150px;height:150px;background:none;}
+.minicolors-slider-saturation .minicolors-grid {background-position:-420px 0;}
+.minicolors-slider-saturation .minicolors-grid-inner {background:url(../images/jquery.minicolors.png) -270px 0;}
+.minicolors-slider-brightness .minicolors-grid {background-position:-570px 0;}
+.minicolors-slider-brightness .minicolors-grid-inner {background:black;}
+.minicolors-slider-wheel .minicolors-grid {background-position:-720px 0;}
+.minicolors-slider,
+.minicolors-opacity-slider {position:absolute;top:1px;left:152px;width:20px;height:150px;background:white url(../images/jquery.minicolors.png) 0 0;cursor:crosshair;}
+.minicolors-slider-saturation .minicolors-slider {background-position:-60px 0;}
+.minicolors-slider-brightness .minicolors-slider {background-position:-20px 0;}
+.minicolors-slider-wheel .minicolors-slider {background-position:-20px 0;}
+.minicolors-opacity-slider {left:173px;background-position:-40px 0;display:none;}
+.minicolors-with-opacity .minicolors-opacity-slider {display:block;}
+/* Pickers */
+.minicolors-grid .minicolors-picker {position:absolute;top:70px;left:70px;width:10px;height:10px;border:solid 1px #333;border-radius:10px;margin-top:-6px;margin-left:-6px;background:none;}
+.minicolors-grid .minicolors-picker span {position:absolute;top:0;left:0;width:6px;height:6px;border-radius:6px;border:solid 2px white;}
+.minicolors-picker {position:absolute;top:0;left:0;width:18px;height:2px;background:white;border:solid 1px black;margin-top:-2px;}
+/* Inline controls */
+.minicolors-inline .minicolors-input,
+.minicolors-inline .minicolors-swatch {display:none;}
+.minicolors-inline .minicolors-panel {position:relative;top:auto;left:auto;display:inline-block;}
+/* --- Bootstrap Theme (theme:'bootstrap') --- */
+/* Input styles */
+.minicolors-theme-bootstrap .minicolors-input {padding:4px 6px;padding-left:30px;background-color:white;border:1px solid #CCC;border-radius:3px;color:#555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:14px;height:19px;margin:0px;box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);}
+/* When the input has focus */
+.minicolors-theme-bootstrap.minicolors-focus .minicolors-input {border-color:#6fb8f1;box-shadow:0 0 10px #6fb8f1;outline:none;}
+/* Swatch styles */
+.minicolors-theme-bootstrap .minicolors-swatch {position:absolute;left:4px;top:4px;z-index:2;}
+/* Handle swatch position (left = default / right) */
+.minicolors-theme-bootstrap.minicolors-swatch-position-right .minicolors-input {padding-left:6px;padding-right:30px;}
+.minicolors-theme-bootstrap.minicolors-swatch-position-right .minicolors-swatch {left:auto;right:4px;}
+/* Panel styles */
+.minicolors-theme-bootstrap .minicolors-panel {top:28px;z-index:3;}
+/* Handle panel positions (top / left) */
+.minicolors-theme-bootstrap.minicolors-position-top .minicolors-panel {top:-154px;}
+.minicolors-theme-bootstrap.minicolors-position-left .minicolors-panel {left:-63px;}
+/* Don't forget to adjust the left position in case the opacity slider is visible! */
+.minicolors-theme-bootstrap.minicolors-position-left.minicolors-with-opacity .minicolors-panel {left:-84px;}
+
+[class^="icon-enftp-"]:before, [class*=" icon-enftp-"]:before {
+	font-family: "entypoftp";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+}
+
+.icon-enftp-tools:before { content: '\e807'; }
+.icon-enftp-cog:before { content: '\e80c'; }
+.icon-enftp-check:before { content: '\e80b'; }
+.icon-enftp-cancel:before { content: '\e80a'; }
+.icon-enftp-help-circled:before { content: '\e806'; }
+.icon-enftp-info-circled:before { content: '\e805'; }
+.icon-enftp-eye:before { content: '\e809'; }
+.icon-enftp-tag:before { content: '\e808'; }
+.icon-enftp-code:before { content: '\e802'; }
+.icon-enftp-brush:before { content: '\e813'; }
+.icon-enftp-picture:before { content: '\e80f'; }
+.icon-enftp-video:before { content: '\e810'; }
+.icon-enftp-user:before { content: '\e811'; }
+.icon-enftp-alert:before { content: '\e800'; }
+.icon-enftp-briefcase:before { content: '\e801'; }
+.icon-enftp-clipboard:before { content: '\e803'; }
+.icon-enftp-megaphone:before { content: '\e804'; }
+.icon-enftp-camera:before { content: '\e80e'; }
+.icon-enftp-search:before { content: '\e812'; }
+.icon-enftp-lock:before { content: '\e80d'; }

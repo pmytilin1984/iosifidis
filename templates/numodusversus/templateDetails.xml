@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>nuModusVersus</name>
+	<creationDate>July 24th, 2013</creationDate>
+	<author>Nuevvo Webware Ltd.</author>
+	<authorEmail>please-use-the-contact-form</authorEmail>
+	<authorUrl>http://nuevvo.gr</authorUrl>
+	<copyright>Copyright (c) 2010 - 2014 Nuevvo Webware Ltd. All rights reserved.</copyright>
+	<license>Free</license>
+	<version>1.0.6</version>
+	<description>TPL_NUMODUSVERSUS_XML_DESCRIPTION</description>
+	<files>
+		<folder>css</folder>		
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>		
+		<filename>raw.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	<positions>
+		<position>nuModusVersus_Above_Component</position>
+		<position>nuModusVersus_Below_Component</position>
+		<position>nuModusVersus_Below_Slideshow</position>		
+		<position>nuModusVersus_Bottom</position>		
+		<position>nuModusVersus_Breadcrumbs</position>
+		<position>nuModusVersus_Component</position>
+		<position>nuModusVersus_Footer</position>
+		<position>nuModusVersus_Left</position>
+		<position>nuModusVersus_Menu</position>
+		<position>nuModusVersus_Right</position>		
+		<position>nuModusVersus_Search</position>
+		<position>nuModusVersus_Slideshow</position>
+		<position>nuModusVersus_Statistics</position>
+		<position>nuModusVersus_Top</position>		
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_numodusversus.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_numodusversus.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="templates/numodusversus/includes/elements/">	
+				<field name="nuBase" type="nuBase" />
+			</fieldset>
+			<fieldset name="nuParamsStandard" addfieldpath="templates/numodusversus/includes/elements/">
+				<!-- ######################### Branding ######################### -->
+				<field name="nutpHeaderBranding" type="nuHeader" label="TPL_NU_BE_BRANDING" description="TPL_NU_BE_BRANDING_DESC" class="nuHeaderSiteLogo" />
+				<field name="siteLogo" type="nuImage" label="TPL_NU_BE_LOGO_IMAGE" description="TPL_NU_BE_LOGO_IMAGE_DESC" filter="raw" />
+				<field name="siteLogoAltText" type="text" label="TPL_NU_BE_LOGO_IMAGE_ALT_TEXT" description="TPL_NU_BE_LOGO_IMAGE_ALT_TEXT_DESC" filter="string" size="40" />
+				<field name="siteTextAsLogo" type="text" label="TPL_NU_BE_TEXT_AS_LOGO" description="TPL_NU_BE_TEXT_AS_LOGO_DESC" filter="string" size="40" default="" />
+				<field name="siteTagline" type="textarea" cols="20" rows="4" default="" label="TPL_NU_BE_SITE_TAGLINE" description="TPL_NU_BE_SITE_TAGLINE_DESC" filter="string" />
+				<field name="nutpIconIOS57x57" type="nuImage" label="TPL_NU_BE_IOS_ICON_57" description="TPL_NU_BE_IOS_ICON_DESC" filter="raw" />
+				<field name="nutpIconIOS72x72" type="nuImage" label="TPL_NU_BE_IOS_ICON_72" description="TPL_NU_BE_IOS_ICON_DESC" filter="raw" />
+				<field name="nutpIconIOS114x114" type="nuImage" label="TPL_NU_BE_IOS_ICON_114" description="TPL_NU_BE_IOS_ICON_DESC" filter="raw" />
+				<field name="nutpIconIOS144x144" type="nuImage" label="TPL_NU_BE_IOS_ICON_144" description="TPL_NU_BE_IOS_ICON_DESC" filter="raw" />
+				<!-- ######################### jQuery Handling ######################### -->
+				<field name="nutpHeaderJqueryHandling" type="nuHeader" label="TPL_NU_BE_JQUERY_HANDLING" description="TPL_NU_BE_JQUERY_HANDLING_DESC" class="nuHeaderJquery" />
+				<field name="nutpJqueryHandling" type="list" default="1.10.1" label="TPL_NU_BE_SELECT_JQUERY_VERSION_TO_USE" description="TPL_NU_BE_SELECT_JQUERY_VERSION_TO_USE_DESC">
+					<option value="0">TPL_NU_BE_DO_NOT_LOAD_JQUERY</option>
+					<option value="1.7">TPL_NU_BE_LOAD_V1_7_LATEST_COPY</option>
+					<option value="1.8">TPL_NU_BE_LOAD_V1_8_LATEST_COPY</option>
+					<option value="1.9.1">TPL_NU_BE_LOAD_V1_9_LATEST_COPY</option>
+					<option value="1.10.1">TPL_NU_BE_LOAD_V1_10_LATEST_COPY</option>
+				</field>
+				<!-- ######################### Custom CSS & JS Handling ######################### -->
+				<field name="nutpHeaderCustomCSSJSHandling" type="nuHeader" label="TPL_NU_BE_CUSTOM_CSS_JS_HANDLING" description="TPL_NU_BE_CUSTOM_CSS_JS_HANDLING_DESC" class="nuHeaderCustomCSSJS" />
+				<field name="nutpLoadCustomCSS" type="list" default="1" label="TPL_NU_BE_LOAD_CUSTOM_CSS" description="TPL_NU_BE_LOAD_CUSTOM_CSS_DESC">
+					<option value="0">TPL_NU_BE_NO</option>
+					<option value="1">TPL_NU_BE_YES</option>
+				</field>
+				<field name="nutpLoadCustomJS" type="list" default="1" label="TPL_NU_BE_LOAD_CUSTOM_JS" description="TPL_NU_BE_LOAD_CUSTOM_JS_DESC">
+					<option value="0">TPL_NU_BE_NO</option>
+					<option value="1">TPL_NU_BE_YES</option>
+				</field>
+				<!-- ######################### Google Web Fonts ######################### -->
+				<field name="nutpHeaderGoogleWebFonts" type="nuHeader" label="TPL_NU_BE_GOOGLE_WEB_FONTS" description="TPL_NU_BE_GOOGLE_WEB_FONTS_DESC" class="nuHeaderGoogleWebFonts" />
+				<field name="nutpGoogleWebFonts" type="nuGwf" multiple="multiple" size="10" default="Open Sans" label="TPL_NU_BE_LOAD_GOOGLE_WEB_FONTS" description="TPL_NU_BE_LOAD_GOOGLE_WEB_FONTS_DESC" />
+				<!-- ######################### Meta Tags ######################### -->
+				<field name="nutpHeaderMetaTags" type="nuHeader" label="TPL_NU_BE_META_TAGS" description="TPL_NU_BE_META_TAGS_DESC" class="nuHeaderMeta" />
+				<field name="nutpMetaDistribution" type="list" default="global" label="TPL_NU_BE_CONTENT_DISTRIBUTION" description="TPL_NU_BE_CONTENT_DISTRIBUTION_DESC">
+					<option value="global">TPL_NU_BE_GLOBAL</option>
+					<option value="local">TPL_NU_BE_LOCAL</option>
+					<option value="iu">TPL_NU_BE_IU</option>
+				</field>
+				<field name="nutpOpenGraphURL" type="text" size="40" label="TPL_NU_BE_OG_URL" description="TPL_NU_BE_OG_DESC" />
+				<field name="nutpOpenGraphTitle" type="text" size="40" label="TPL_NU_BE_OG_TITLE" description="TPL_NU_BE_OG_DESC" />
+				<field name="nutpOpenGraphDescription" type="text" size="40" label="TPL_NU_BE_OG_DESCRIPTION" description="TPL_NU_BE_OG_DESC" />
+				<field name="nutpOpenGraphImage" type="nuImage" label="TPL_NU_BE_OG_IMAGE" description="TPL_NU_BE_OG_DESC" filter="raw" />
+				<field name="nutpFacebookAppID" type="text" label="TPL_NU_BE_FB_APP_ID" description="TPL_NU_BE_FB_APP_ID_DESC" />
+				<field name="nutpFeedLink1" type="text" size="40" label="TPL_NU_BE_FEED_LINK1" description="TPL_NU_BE_FEED_LINK_DESC" />
+				<field name="nutpFeedLink1Title" type="text" size="40" label="TPL_NU_BE_FEED_LINK1_TITLE" description="TPL_NU_BE_FEED_LINK_TITLE_DESC" />
+				<field name="nutpFeedLink2" type="text" size="40" label="TPL_NU_BE_FEED_LINK2" description="TPL_NU_BE_FEED_LINK_DESC" />
+				<field name="nutpFeedLink2Title" type="text" size="40" label="TPL_NU_BE_FEED_LINK2_TITLE" description="TPL_NU_BE_FEED_LINK_TITLE_DESC" />
+				<field name="nutpFeedLink3" type="text" size="40" label="TPL_NU_BE_FEED_LINK3" description="TPL_NU_BE_FEED_LINK_DESC" />
+				<field name="nutpFeedLink3Title" type="text" size="40" label="TPL_NU_BE_FEED_LINK3_TITLE" description="TPL_NU_BE_FEED_LINK_TITLE_DESC" />
+				<field name="nutpRemoveCanonicalMeta" type="list" default="0" label="TPL_NU_BE_REMOVE_CANONICAL_META" description="TPL_NU_BE_REMOVE_CANONICAL_META_DESC">
+					<option value="0">TPL_NU_BE_NO</option>
+					<option value="1">TPL_NU_BE_YES</option>
+				</field>
+				<field name="nutpForceLoadBootstrap" type="list" default="0" label="TPL_NU_BE_FORCE_LOAD_BOOTSTRAP" description="TPL_NU_BE_FORCE_LOAD_BOOTSTRAP_DESC">
+					<option value="0">TPL_NU_BE_NO</option>
+					<option value="1">TPL_NU_BE_YES</option>
+				</field>
+				<!-- ######################### Credits & Copyrights ######################### -->
+				<field name="nutpHeaderCreditsCopyrights" type="nuHeader" label="TPL_NU_BE_CREDITS_COPYRIGHTS" description="TPL_NU_BE_CREDITS_COPYRIGHTS_DESC" class="nuHeaderCredits"/>
+				<field name="nutpCreditsName" type="text" default="designed by Nuevvo" size="40" label="TPL_NU_BE_CREDITS_NAME" description="TPL_NU_BE_CREDITS_NAME_DESC" />
+				<field name="nutpCreditsLink" type="text" default="http://nuevvo.com" size="40" label="TPL_NU_BE_CREDITS_LINK" description="TPL_NU_BE_CREDITS_LINK_DESC" />
+				<field name="nutpCopyright" type="text" default="" size="40" label="TPL_NU_BE_COPYRIGHT_NAME" description="TPL_NU_BE_COPYRIGHT_NAME_DESC" />
+				<field name="nutpCopyrightStartYear" type="text" default="" size="4" label="TPL_NU_BE_COPYRIGHT_START_YEAR" description="TPL_NU_BE_COPYRIGHT_START_YEAR_DESC" />
+				<!-- ######################### Google Analytics ######################### -->
+				<field name="nutpHeaderGoogleAnalytics" type="nuHeader" label="TPL_NU_BE_GOOGLE_ANALYTICS" description="TPL_NU_BE_GOOGLE_ANALYTICS_DESC" class="nuHeaderAnalytics"/>
+				<field name="nutpGAID" type="nuText" default="" size="40" prefix="UA-" label="TPL_NU_BE_GOOGLE_ANALYTICS_ID" description="TPL_NU_BE_GOOGLE_ANALYTICS_ID_DESC" />
+				<field name="nutpGADomain" type="text" default="" size="40" label="TPL_NU_BE_GOOGLE_ANALYTICS_DOMAIN" description="TPL_NU_BE_GOOGLE_ANALYTICS_DOMAIN_DESC" />
+				<!-- ######################### Webmaster Tools ######################### -->
+				<field name="nutpHeaderWebmasterTools" type="nuHeader" label="TPL_NU_BE_WEBMASTER_TOOLS" description="TPL_NU_BE_WEBMASTER_TOOLS_DESC" class="nuHeaderSEO" />
+				<field name="nutpGoogleVerificationID" type="text" default="" size="40" label="TPL_NU_BE_GOOGLE_VERIFICATION_ID" description="TPL_NU_BE_GOOGLE_VERIFICATION_ID_DESC" />
+				<field name="nutpBingVerificationID" type="text" default="" size="40" label="TPL_NU_BE_BING_VERIFICATION_ID" description="TPL_NU_BE_BING_VERIFICATION_ID_DESC" />
+				<field name="nutpAlexaVerificationID" type="text" default="" size="40" label="TPL_NU_BE_ALEXA_VERIFICATION_ID" description="TPL_NU_BE_ALEXA_VERIFICATION_ID_DESC" />
+				<!-- ######################### Social Links ######################### -->
+				<field name="nutpHeaderSocialLinks" type="nuHeader" label="TPL_NU_BE_SOCIAL_LINKS" description="TPL_NU_BE_SOCIAL_LINKS_DESC" class="nuHeaderSocialLinks" />
+				<field name="siteSocialFacebook" type="nuText" default="" size="40" prefix="https://www.facebook.com/" label="TPL_NU_BE_SL_FACEBOOK" description="" />
+				<field name="siteSocialTwitter" type="nuText" default="" size="40" prefix="https://twitter.com/" label="TPL_NU_BE_SL_TWITTER" description="" />
+				<field name="siteSocialGooglePlus" type="nuText" default="" size="40" prefix="https://plus.google.com/" label="TPL_NU_BE_SL_GOOGLEPLUS" description="" />
+				<field name="siteSocialFoursquare" type="nuText" default="" size="40" prefix="https://foursquare.com/" label="TPL_NU_BE_SL_FOURSQUARE" description="" />
+				<field name="siteSocialYouTube" type="nuText" default="" size="40" prefix="http://www.youtube.com/" label="TPL_NU_BE_SL_YOUTUBE" description="" />
+				<field name="siteSocialVimeo" type="nuText" default="" size="40" prefix="http://vimeo.com/" label="TPL_NU_BE_SL_VIMEO" description="" />
+				<field name="siteSocialDailymotion" type="nuText" default="" size="40" prefix="http://www.dailymotion.com/" label="TPL_NU_BE_SL_DAILYMOTION" description="" />
+				<field name="siteSocialSoundCloud" type="nuText" default="" size="40" prefix="https://soundcloud.com/" label="TPL_NU_BE_SL_SOUNDCLOUD" description="" />
+				<field name="siteSocialMixCloud" type="nuText" default="" size="40" prefix="http://www.mixcloud.com/" label="TPL_NU_BE_SL_MIXCLOUD" description="" />
+				<field name="siteSocialFlickr" type="nuText" default="" size="40" prefix="http://www.flickr.com/photos/" label="TPL_NU_BE_SL_FLICKR" description="" />
+				<field name="siteSocialInstagram" type="nuText" default="" size="40" prefix="http://instagram.com/" label="TPL_NU_BE_SL_INSTAGRAM" description="" />
+				<field name="siteSocialPinterest" type="nuText" default="" size="40" prefix="http://pinterest.com/" label="TPL_NU_BE_SL_PINTEREST" description="" />
+				<field name="siteSocial500px" type="nuText" default="" size="40" prefix="http://500px.com/" label="TPL_NU_BE_SL_500PX" description="" />
+				<field name="siteSocialDribbble" type="nuText" default="" size="40" prefix="http://dribbble.com/" label="TPL_NU_BE_SL_DRIBBBLE" description="" />
+				<field name="siteSocialBehance" type="nuText" default="" size="40" prefix="http://www.behance.net/" label="TPL_NU_BE_SL_BEHANCE" description="" />
+				<field name="siteSocialGithub" type="nuText" default="" size="40" prefix="https://github.com/" label="TPL_NU_BE_SL_GITHUB" description="" />
+			</fieldset>
+			<fieldset name="nuParamsCodeBlocks" addfieldpath="templates/numodusversus/includes/elements/">
+				<!-- ######################### Custom Code Blocks ######################### -->
+				<field name="nutpHeaderCustomCodeBlocks" type="nuHeader" label="TPL_NU_BE_CUSTOM_CODE_BLOCKS" description="TPL_NU_BE_CUSTOM_CODE_BLOCKS_DESC" class="nuHeaderCustomCode" />
+				<field name="nutpHeadTop" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_HEAD_TOP" description="TPL_NU_BE_HEAD_TOP_DESC" filter="raw" class="aceEditor" />
+				<field name="nutpHeadBottom" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_HEAD_BOTTOM" description="TPL_NU_BE_HEAD_BOTTOM_DESC" filter="raw" class="aceEditor" />
+				<field name="nutpBodyTop" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_BODY_TOP" description="TPL_NU_BE_BODY_TOP_DESC" filter="raw" class="aceEditor" />
+				<field name="nutpBodyBottom" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_BODY_BOTTOM" description="TPL_NU_BE_BODY_BOTTOM_DESC" filter="raw" class="aceEditor" />
+			</fieldset>
+			<fieldset name="nuParamsTemplateSpecific" addfieldpath="templates/numodusversus/includes/elements/">
+				<!-- ######################### Content Highlights ######################### -->
+				<field name="nutpHeaderContentHighlights" type="nuHeader" label="TPL_NU_BE_CONTENT_HIGHLIGHTS" filter="raw" description="TPL_NU_BE_CONTENT_HIGHLIGHTS_DESC" class="nuHeaderHighlights" />
+				<field name="contentHighlights" type="nuHighlights" />
+				<!-- ######################### Content Variations ######################### -->
+				<!-- <field name="nutpHeaderContentVariations" type="nuHeader" label="TPL_NU_BE_CONTENT_VARIATIONS" description="TPL_NU_BE_CONTENT_VARIATIONS_DESC" class="nuHeaderContentVariations" />
+				<field name="contentVariations" type="list" default="default" label="TPL_NU_BE_SELECT_CONTENT_VARIATION" description="TPL_NU_BE_SELECT_CONTENT_VARIATION_DESC">
+					<option value="default">TPL_NU_BE_CV_DEFAULT</option>
+					<option value="variation1">Variation 1</option>
+					<option value="variation2">Variation 2</option>
+					<option value="variation3">Variation 3</option>
+				</field> -->
+				<!-- ######################### Color Variations ######################### -->
+				<field name="nutpHeaderColorVariations" type="nuHeader" label="TPL_NU_BE_COLOR_VARIATIONS" description="TPL_NU_BE_COLOR_VARIATIONS_DESC" class="nuHeaderColors" />
+				<field name="colorVariations" type="list" default="default" label="TPL_NU_BE_SELECT_COLOR_VARIATION" description="TPL_NU_BE_SELECT_COLOR_VARIATION_DESC">					
+					<option value="default|#62b9b0|#e2534b">Turquoise/Red</option>					
+					<option value="purple|#a65980|#20a8da">Purple/Blue</option>
+					<option value="green|#70c570|#dc5925">Green/Orange</option>	
+					<option value="custom">Custom</option>				
+				</field>
+				<!-- Note to developers: Add as many 'custom color' fields as the number of array elements on each color variation minus the identifier used as first item of the array. E.g. for 'color1|#101010|#202020', the identifier is 'color1' and the color options are 2 (the rest 2 items in the array). -->
+				<field name="_COLOR1_" type="text" label="TPL_NU_BE_CV_CC1" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR2_" type="text" label="TPL_NU_BE_CV_CC2" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<!--<field name="_COLOR3_" type="text" label="TPL_NU_BE_CV_CC3" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />-->
+				<!-- ######################### Category Colors ######################### -->
+				<!-- <field name="nutpHeaderSectionColors" type="nuHeader" label="TPL_NU_BE_CATEGORY_COLORS" description="TPL_NU_BE_CATEGORY_COLORS_DESC" class="nuHeaderColors" />
+				<field name="categoryColors" type="nuCategoryColors" /> -->
+			</fieldset>
+		</fields>
+	</config>
+</extension>

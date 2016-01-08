@@ -1,0 +1,222 @@
+/**
+ * @version     1.0.5
+ * @package     nuModusVersus
+ * @author      Nuevvo - http://nuevvo.com
+ * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
+ * @license     http://nuevvo.com/license
+ */
+
+.skills ul li span {background-image:url(_TEMPLATEPATH_/images/variations/_IMAGEFOLDER_/skillsSprite.png);}
+
+/* Elements for rgba COLOR1 */
+input.button, button, input.btn,
+.contact button.button:hover, .contact button.button:focus,
+.itemCommentsForm form input#submitCommentButton:hover, 
+.itemCommentsForm form input#submitCommentButton:focus,
+#itemListPrimary .liBlock:hover .liItemBodyBlock,
+table.calendar tr td.calendarToday,
+.searchMod .modSearchBlock form input.button,
+.k2Pagination ul li span.pagenav, .joomlaPagination ul li span.pagenav,
+.block03, .btn03, .btn04:hover,
+ul.sigProClassic li.sigProThumb a.sigProLink:hover span.sigProPseudoCaption,
+span.itemAddLink, span.list-edit, span.itemEditLink {background:rgba(_COLOR1_RGB_,0.86);}
+    
+header, .bottomArea {background-color:rgba(_COLOR1_RGB_,0.8);}
+
+.newsfeed h3, .newsfeed h3 a, dl.search-results dt a, .itemHeader h2.itemTitle, .itemHeader h2.itemTitle a, 
+.itemAuthorBlock div.itemAuthorDetails h3.itemAuthorName a,
+.liItemHeader h3.liItemTitle a, 
+div.userBlock h2 a,
+.latestItemsCategory h2, .latestItemsCategory h2 a,
+.latestItemsUser h2, .latestItemsUser h2 a,
+.biggerTitle .modItemsBlock a.moduleItemTitle,
+.modUserBlock .modUserBlockDetails span.ubName,
+.modCCBlock ul li span.lcComment,
+.modCCBlock ul li span.tcUsername,
+.modAuthorsListBlock ul li a.abAuthorName,
+.modUsersBlock ul li .ubUserName,
+.rightBar .latestBlogPosts.biggerTitle a.moduleItemTitle, .biggerTitle h4 a  {color:rgba(_COLOR1_RGB_,0.86);}
+
+.bubble02 .nuBubbleContent:after {border-color:rgba(_COLOR1_RGB_,0);}
+
+/* All elements that load _COLOR1_ */
+[class^="icon-"], [class*=" icon-"], i.iconFont, li:before,
+.itemToolbar ul li a, 
+.itemFullText ul.nuUnorderedList02 li:before {color:_COLOR1_;}
+
+input.button, button, input.btn,
+.contact button.button:hover, 
+.contact button.button:focus, 
+.itemCommentsForm form input#submitCommentButton:hover, 
+.itemCommentsForm form input#submitCommentButton:focus,
+.k2Pagination ul li span.pagenav, .joomlaPagination ul li span.pagenav,
+.block03, .btn03, .btn04:hover,
+span.itemAddLink, span.list-edit, span.itemEditLink {border-bottom-color:_COLOR1_;}
+
+.bubble02 .nuBubbleContent:after {border-top-color:_COLOR1_;}
+
+footer, #com_users legend, .cat-items table th, 
+.modItemsBlock ul li .moduleItemReadMore a, 
+.modItemsBlock ul li a.moduleItemReadMore, 
+.modItemsBlock a.moduleCustomLink,
+#slideshow .nuSliderPagination ul li .prev:hover, 
+#slideshow .nuSliderPagination ul li .next:hover,
+.oneItem .modItemsBlock ul li a.moduleItemReadMore:hover, 
+.oneItem .modItemsBlock a.moduleCustomLink:hover,
+.categoriesSubmenu .modCategoriesListBlock ul li.activeCategory a,
+ol.nuOrderedList01 > li:before, span.highlight01, mark.highlight01,
+.bubble02 .nuBubbleContent, .itemFullText table th,
+dl.tabs dt.closed, ul.tabsPlain li, ul.tabs li {background:_COLOR1_;}
+
+/* Elements for rgba COLOR2 */
+input.button:hover, button:hover, input.button:focus, button:focus, input.btn:hover, input.btn:focus,
+.contact button.button,
+.itemCommentsForm form input#submitCommentButton,
+.modSearchBlock form input.button,
+.k2Pagination ul li a:hover, .joomlaPagination ul li a:hover,
+.block04, .btn04, .btn01:hover, .btn02:hover, .btn03:hover,
+span.itemAddLink:hover, span.list-edit:hover, span.itemEditLink:hover {background:rgba(_COLOR2_RGB_,0.8);}
+
+.mainNavigation ul ul:after,
+.searchMod .modSearchBlock:after,
+.bubble03 .nuBubbleContent:after {border-color:rgba(_COLOR2_RGB_,0);}
+
+
+/* All elements that load _COLOR2_ */
+a, a:hover, .contactDetails .contact-address i, .k2FeedIcon a:before, 
+div.liItemReadMore a i.icon-arrow-right,
+.imagePreviews h3,
+.customList ul li:before,
+table.calendar tr td.calendarDateLinked a,
+.columnItems-4 ul li:hover .moduleItemIcon i,
+.rightBar .latestBlogPosts a.moduleItemTitle,
+.itemFullText ul.nuUnorderedList01 li:before {color:_COLOR2_;}
+
+input.button:hover, button:hover, input.button:focus, button:focus, input.btn:hover, input.btn:focus,
+.contact button.button,
+.itemCommentsForm form input#submitCommentButton,
+.modSearchBlock form input.button,
+.searchMod .modSearchBlock:after,
+.k2Pagination ul li a:hover, .joomlaPagination ul li a:hover,
+.block04, .btn04, .btn01:hover, .btn02:hover, .btn03:hover,
+.mainNavigation ul ul:after,
+span.itemAddLink:hover, span.list-edit:hover, span.itemEditLink:hover {border-bottom-color:_COLOR2_;}
+
+.bubble03 .nuBubbleContent:after {border-top-color:_COLOR2_;}
+
+.itemNavigation a:hover, 
+#itemListPrimary .liItemBodyBlock .liItemReadMore a:hover, 
+.modItemsBlock ul li .moduleItemReadMore a:hover,
+.modItemsBlock ul li a.moduleItemReadMore:hover, 
+.modItemsBlock a.moduleCustomLink:hover, 
+table.calendar tr td.calendarDateLinked:hover,
+table.calendar tr td.calendarTodayLinked,
+.modTagCloudBlock a:hover, .tagspopular ul li a:hover,
+.searchMod a:hover, .searchMod a.active,
+.searchMod .modSearchBlock,
+.oneItem .modItemsBlock ul li a.moduleItemReadMore, 
+.oneItem .modItemsBlock a.moduleCustomLink,
+.columnItems-4 ul li:hover .moduleItemReadMore a,
+#slideshow .moduleItemBody h2.slideTitle, 
+#slideshow .nuSliderPagination ul li a:hover, #slideshow .nuSliderPagination ul li a.navigationButtonActive,
+#slideshow .nuSliderPagination ul li .prev, #slideshow .nuSliderPagination ul li .next,
+.modSliderBlock .nuSliderPagination ul li .prev:hover, 
+.modSliderBlock .nuSliderPagination ul li .next:hover,
+.categoriesSubmenu .modCategoriesListBlock ul li a:hover,
+span.highlight02, mark.highlight02, .bubble03 .nuBubbleContent, .itemFullText table.table02 th,
+dl.tabs dt.closed:hover, ul.tabsPlain li a:hover, ul.tabsPlain li:hover, ul.tabs li:hover {background:_COLOR2_;}
+
+div.tip, div.tip-title {background:_COLOR2_ !important;}
+
+
+/* Main menu */
+#menuToggler:hover, #menuToggler.menuActive,
+.mainNavigation ul ul,
+.mainNavigation ul li:hover a, 
+.mainNavigation ul li a:hover, 
+.mainNavigation ul li.active a:hover, 
+.mainNavigation ul li.active:hover a,
+.mainNavigation ul li.active li a, 
+.mainNavigation ul li.active:hover li a,
+.mainNavigation ul li.active li.active li a, 
+.mainNavigation ul li.active:hover li.active:hover li a,
+.mainNavigation ul ul ul li a,
+.mainNavigation ul li:hover li:hover li a,
+.mainNavigation ul li.active li.active li a, 
+.mainNavigation ul li.active:hover li.active:hover li a {background:_COLOR2_;}
+
+.mainNavigation ul ul li a:hover,
+.mainNavigation ul ul li:hover a,   
+.mainNavigation ul ul li.active a,   
+.mainNavigation ul li.active li a:hover,
+.mainNavigation ul li.active li.active a, 
+.mainNavigation ul li.active:hover li.active a,
+.mainNavigation ul li:hover li:hover li:hover a,  
+.mainNavigation ul li.active li.active li a:hover,
+.mainNavigation ul li.active li.active li:hover a,
+.mainNavigation ul li.active li.active li.active a,
+.mainNavigation ul li.active:hover li.active:hover li.active a,
+.mainNavigation ul li.active:hover li.active:hover li:hover a, 
+.mainNavigation ul li.active:hover li.active:hover li a:hover {background:_COLOR1_;}
+
+/* Fallback colors for IE8 */
+
+/* Elements for rgba COLOR1 */
+.isIE8 input.button, .isIE8 button, .isIE8 input.btn,
+.isIE8 .contact button.button:hover, .isIE8 .contact button.button:focus,
+.isIE8 .itemCommentsForm form input#submitCommentButton:hover, 
+.isIE8 .itemCommentsForm form input#submitCommentButton:focus,
+.isIE8 #itemListPrimary .liBlock:hover .liItemBodyBlock,
+.isIE8 table.calendar tr td.calendarToday,
+.isIE8 .searchMod .modSearchBlock form input.button,
+.isIE8 .k2Pagination ul li span.pagenav, .isIE8 .joomlaPagination ul li span.pagenav,
+.isIE8 .block03, .isIE8 .btn03, .isIE8 .btn04:hover,
+.isIE8 ul.sigProClassic li.sigProThumb a.sigProLink:hover span.sigProPseudoCaption,
+.isIE8 span.itemAddLink, .isIE8 span.list-edit, .isIE8 span.itemEditLink,
+.isIE8 #slideshow .nuSliderPagination ul li .prev a.previousButton:hover, .isIE8 #slideshow .nuSliderPagination ul li .next a.nextButton:hover {background:_COLOR1_;}
+    
+.isIE8 header, .isIE8 .bottomArea {background-color:COLOR1;}
+
+.isIE8 .newsfeed h3, .isIE8 .newsfeed h3 a, .isIE8 dl.search-results dt a, 
+.isIE8 .itemHeader h2.itemTitle, .isIE8 .itemHeader h2.itemTitle a, 
+.isIE8 .itemAuthorBlock div.itemAuthorDetails h3.itemAuthorName a,
+.isIE8 .liItemHeader h3.liItemTitle a, 
+.isIE8 div.userBlock h2 a,
+.isIE8 .latestItemsCategory h2, .isIE8 .latestItemsCategory h2 a,
+.isIE8 .latestItemsUser h2, .isIE8 .latestItemsUser h2 a,
+.isIE8 .biggerTitle a.moduleItemTitle,
+.isIE8 .modUserBlock .modUserBlockDetails span.ubName,
+.isIE8 .modCCBlock ul li span.lcComment,
+.isIE8 .modCCBlock ul li span.tcUsername,
+.isIE8 .modAuthorsListBlock ul li a.abAuthorName,
+.isIE8 .modUsersBlock ul li .ubUserName,
+.isIE8 .rightBar .latestBlogPosts.biggerTitle a.moduleItemTitle, .biggerTitle h4 a {color:_COLOR1_;}
+
+.isIE8 .bubble02 .nuBubbleContent:after {border-top-color:_COLOR1_;}
+
+
+/* Elements for rgba COLOR2 */
+.isIE8 input.button:hover, .isIE8 button:hover, .isIE8 input.button:focus, .isIE8 button:focus, .isIE8 input.btn:hover, .isIE8 input.btn:focus,
+.isIE8 .contact button.button,
+.isIE8 .itemCommentsForm form input#submitCommentButton,
+.isIE8 .modSearchBlock form input.button,
+.isIE8 .k2Pagination ul li a:hover, .isIE8 .joomlaPagination ul li a:hover,
+.isIE8 .block04, .isIE8 .btn04, .isIE8 .btn01:hover, .isIE8 .btn02:hover, .isIE8 .btn03:hover,
+.isIE8 span.itemAddLink:hover, .isIE8 span.list-edit:hover, .isIE8 span.itemEditLink:hover,
+.isIE8 #slideshow .nuSliderPagination ul li .prev a.previousButton, .isIE8 #slideshow .nuSliderPagination ul li .next a.nextButton,
+.isIE8 .nuSliderPagination ul li .prev a.previousButton:hover, .isIE8 .nuSliderPagination ul li .next a.nextButton:hover {background:_COLOR2_;}
+
+.isIE8 .mainNavigation ul ul:after,
+.isIE8 .searchMod .modSearchBlock:after {border-bottom-color:_COLOR2_;}
+.isIE8 .bubble03 .nuBubbleContent:after {border-top-color:_COLOR2_;}
+
+@media screen and (max-width: 600px) { 
+ 
+ .mainNavigation ul {background:_COLOR2_;}
+    
+}
+
+
+
+
+

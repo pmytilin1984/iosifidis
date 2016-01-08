@@ -1,0 +1,94 @@
+/**
+ * @version     1.0.2
+ * @package     nuModusVersus
+ * @author      Nuevvo - http://nuevvo.com
+ * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
+ * @license     http://nuevvo.com/license
+ */
+
+/* Normalize (2012-03-11)
+------------------------------------------------------ */
+summary,section,nav,hgroup,header,footer,figure,figcaption,details,aside,article{display:block}video,canvas,audio{display:inline-block;*display:inline;*zoom:1}audio:not([controls]),[hidden]{display:none}audio:not([controls]){height:0}html,textarea,select,input,button{font-size:100%}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}textarea,select,input,button,html{font-family:sans-serif}body,figure,form,textarea,select,input,button{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}h2{font-size:1.5em;margin:0.83em 0}h3{font-size:1.17em}h3,pre,p,ul,ol,menu,dl{margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:0.83em;margin:1.67em 0}h6{font-size:0.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}strong,b{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}samp,kbd,code,pre{font:1em monospace,serif;_}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:after,q:before{content:'';content:none}small,sup,sub{font-size:75%}sup,sub{line-height:0;position:relative}sup,sub,textarea,select,input,button{vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dd{margin:0 0 0 40px}ul,ol,menu{padding:0 0 0 40px}nav ol,nav ul{list-style:none;list-style-image:none}img,legend,input::-moz-focus-inner,button::-moz-focus-inner{border:0}img{-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend,input[type="radio"],input[type="checkbox"],input::-moz-focus-inner,button::-moz-focus-inner{padding:0}legend{white-space:normal;*margin-left:-7px}textarea,select,input,button{*vertical-align:middle}input,button{line-height:normal}input[type="submit"],input[type="reset"],input[type="button"],button{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[disabled],button[disabled]{cursor:default}input[type="radio"],input[type="checkbox"]{box-sizing:border-box;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+
+
+/* Common
+------------------------------------------------------ */
+body {padding:0;margin:0;}
+
+/* Links */
+a {text-decoration:none;}
+a:link {}
+a:visited {}
+a:hover {text-decoration:none;}
+a:active,
+a:focus {outline:0;}
+
+/* Headings */
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+/* Listings */
+ul {margin:8px 16px;padding:0 8px;}
+ul li {margin:1px 4px;padding:0;}
+ol {margin:8px 16px;padding:0 8px;}
+ol li {margin:1px 4px;padding:0;}
+
+/* Forms */
+form {padding:0;margin:0;}
+select,
+option {font-weight:normal;text-decoration:none;}
+input {vertical-align:middle;}
+textarea {}
+label {}
+
+/* Horizontal lines */
+hr {line-height:0;height:0;border:none;border-bottom:1px solid #ccc;padding:0;margin:8px 0;}
+
+/* Images */
+img {border:none;}
+
+/* Form elements */
+.inputbox {}
+.inputbox:focus {}
+.button {cursor:pointer;}
+
+/* Horizontal lines */
+hr.separator {}
+
+/* Other */
+fieldset {}
+legend {}
+
+/* Global clear */
+.clr {clear:both;height:0;line-height:0;display:block;float:none;padding:0;margin:0;border:0;}
+
+
+
+/* Structure
+------------------------------------------------------ */
+
+
+
+/* Components
+------------------------------------------------------ */
+
+
+
+/* Modules
+------------------------------------------------------ */
+
+
+
+/* Plugins
+------------------------------------------------------ */
+
+
+
+/* component.php
+------------------------------------------------------ */
+.componentContainer {margin:10px;padding:10px;background:#fff;border:1px solid #ccc;border-radius:4px;}

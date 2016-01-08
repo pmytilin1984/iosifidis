@@ -1,0 +1,983 @@
+/**
+ * @version     1.0.6
+ * @package     nuModusVersus
+ * @author      Nuevvo - http://nuevvo.com
+ * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
+ * @license     http://nuevvo.com/license
+ */
+
+/*----------------------------------------------------------------------
+	Common Elements
+----------------------------------------------------------------------*/
+
+/* --- Global K2 container --- */
+#k2Container {}
+body.contentpane #k2Container {} /* used in popups */
+
+/* --- General padding --- */
+.k2Padding {}
+
+/* --- Zebra rows --- */
+.even {}
+.odd {}
+
+/* --- RSS feed icon --- */
+div.k2FeedIcon {}
+div.k2FeedIcon a,
+div.k2FeedIcon a:hover {}
+div.k2FeedIcon a:before {}
+div.k2FeedIcon a:hover {}
+div.k2FeedIcon a span,
+div.k2FeedIcon a:hover span {}
+
+/* --- Rating --- */
+.itemRatingForm {}
+.itemRatingLog {}
+div.itemRatingForm .formLogLoading {}
+.itemRatingList,
+.itemRatingList a:hover,
+.itemRatingList .itemCurrentRating {}
+.itemRatingList {}
+.itemRatingList li {}
+.itemRatingList a,
+.itemRatingList .itemCurrentRating {}
+.itemRatingList a:hover {}
+.itemRatingList a.one-star {}
+.itemRatingList a.two-stars {}
+.itemRatingList a.three-stars {}
+.itemRatingList a.four-stars {}
+.itemRatingList a.five-stars {}
+.itemRatingList .itemCurrentRating {}
+span.siteRoot {}
+
+/* --- CSS added with Javascript --- */
+.smallerFontSize {}
+.largerFontSize {}
+
+/* --- ReCaptcha --- */
+.recaptchatable .recaptcha_image_cell,
+#recaptcha_table {}
+#recaptcha_table {}
+#recaptcha_response_field {}
+
+/* --- Primary lists in modules --- */
+div.k2LatestCommentsBlock ul,
+div.k2TopCommentersBlock ul,
+div.k2ItemsBlock ul,
+div.k2LoginBlock ul,
+div.k2UserBlock ul.k2UserBlockActions,
+div.k2UserBlock ul.k2UserBlockRenderedMenu,
+div.k2ArchivesBlock ul,
+div.k2AuthorsListBlock ul,
+div.k2CategoriesListBlock ul,
+div.k2UsersBlock ul {} /* Example CSS: padding:0;margin:0;list-style:none;*/
+
+div.k2LatestCommentsBlock ul li,
+div.k2TopCommentersBlock ul li,
+div.k2ItemsBlock ul li,
+div.k2LoginBlock ul li,
+div.k2UserBlock ul.k2UserBlockActions li,
+div.k2UserBlock ul.k2UserBlockRenderedMenu li,
+div.k2ArchivesBlock ul li,
+div.k2AuthorsListBlock ul li,
+div.k2CategoriesListBlock ul li,
+div.k2UsersBlock ul li {} /* Example CSS: display:block;clear:both;padding:2px 0;border-bottom:1px dotted #ccc;*/
+
+.lastItem {} /* class appended on last list item */
+
+/* --- Avatars --- */
+.k2Avatar img {}
+
+/* --- Read more --- */
+a.k2ReadMore {}
+a.k2ReadMore:hover {}
+
+/* --- Pagination --- */
+div.k2Pagination {}
+
+/* --- Pagination (additional styling for Joomla! 1.6+) --- */
+div.k2Pagination ul {}
+div.k2Pagination ul li {}
+
+/* --- Extra fields: CSV data styling --- */
+table.csvData {}
+table.csvData tr th {}
+table.csvData tr td {}
+
+/* --- Featured flags: the classes are repeated further below to indicate placement in the CSS structure --- */
+div.itemIsFeatured,
+div.catItemIsFeatured,
+div.userItemIsFeatured {}
+
+/*----------------------------------------------------------------------
+    Component: Item view
+----------------------------------------------------------------------*/
+a.itemPrintThisPage {}
+a.itemPrintThisPage:hover {}
+
+div.itemView {} /* this is the item container for this view */
+div.itemIsFeatured {} /* Attach a class for each featured item */
+
+span.itemEditLink {}
+span.itemEditLink a {}
+span.itemEditLink a:hover {}
+
+div.itemHeader {}
+    div.itemHeader span.itemDateCreated {}
+    div.itemHeader h2.itemTitle {}
+    div.itemHeader h2.itemTitle span {}
+    div.itemHeader h2.itemTitle span sup {} /* "Featured" presented in superscript */
+    div.itemHeader span.itemAuthor {}
+    div.itemHeader span.itemAuthor a {}
+    div.itemHeader span.itemAuthor a:hover {}
+
+div.itemToolbar {}
+    div.itemToolbar ul {}
+    div.itemToolbar ul li {}
+    div.itemToolbar ul > li:first-child {} /* remove the first CSS border from the left of the toolbar */
+    div.itemToolbar ul li a {}
+    div.itemToolbar ul li a:hover {}
+    div.itemToolbar ul li a span {}
+    div.itemToolbar ul li a.itemPrintLink {}
+    div.itemToolbar ul li a.itemPrintLink span {}
+    div.itemToolbar ul li a.itemEmailLink {}
+    div.itemToolbar ul li a.itemEmailLink span {}
+    div.itemToolbar ul li a.itemVideoLink {}
+    div.itemToolbar ul li a.itemVideoLink span {}
+    div.itemToolbar ul li a.itemImageGalleryLink {}
+    div.itemToolbar ul li a.itemImageGalleryLink span {}
+    div.itemToolbar ul li a.itemCommentsLink {}
+    div.itemToolbar ul li a.itemCommentsLink span {}
+    div.itemToolbar ul li a img {}
+    div.itemToolbar ul li span.itemTextResizerTitle {}
+    div.itemToolbar ul li a#fontDecrease {}
+    div.itemToolbar ul li a#fontDecrease img {}
+    div.itemToolbar ul li a#fontIncrease {}
+    div.itemToolbar ul li a#fontIncrease img {}
+    div.itemToolbar ul li a#fontDecrease span,
+    div.itemToolbar ul li a#fontIncrease span {}
+
+div.itemRatingBlock {}
+    div.itemRatingBlock span {}
+
+div.itemBody {}
+
+div.itemImageBlock {}
+    span.itemImage {}
+    span.itemImage img {}
+    span.itemImageCaption {}
+    span.itemImageCredits {}
+
+div.itemIntroText {}
+    div.itemIntroText img {}
+
+div.itemFullText {}
+    div.itemFullText h3 {}
+    div.itemFullText p {}
+    div.itemFullText img {}
+
+div.itemExtraFields {}
+    div.itemExtraFields h3 {}
+    div.itemExtraFields ul {}
+    div.itemExtraFields ul li {}
+    div.itemExtraFields ul li span.itemExtraFieldsLabel {}
+    div.itemExtraFields ul li span.itemExtraFieldsValue {}
+
+div.itemContentFooter {}
+    span.itemHits {}
+    span.itemDateModified {}
+
+div.itemSocialSharing {}
+    div.itemTwitterButton {}
+    div.itemFacebookButton {}
+    div.itemGooglePlusOneButton {}
+
+div.itemLinks {}
+
+div.itemCategory {}
+    div.itemCategory span {}
+    div.itemCategory a {}
+div.itemTagsBlock {}
+    div.itemTagsBlock span {}
+    div.itemTagsBlock ul.itemTags {}
+    div.itemTagsBlock ul.itemTags li {}
+    div.itemTagsBlock ul.itemTags li a {}
+    div.itemTagsBlock ul.itemTags li a:hover {}
+
+div.itemAttachmentsBlock {}
+    div.itemAttachmentsBlock span {}
+    div.itemAttachmentsBlock ul.itemAttachments {}
+    div.itemAttachmentsBlock ul.itemAttachments li {}
+    div.itemAttachmentsBlock ul.itemAttachments li a {}
+    div.itemAttachmentsBlock ul.itemAttachments li a:hover {}
+    div.itemAttachmentsBlock ul.itemAttachments li span {}
+
+/* Author block */
+div.itemAuthorBlock {}
+    div.itemAuthorBlock img.itemAuthorAvatar {}
+    div.itemAuthorBlock div.itemAuthorDetails {}
+    div.itemAuthorBlock div.itemAuthorDetails h3.authorName {}
+    div.itemAuthorBlock div.itemAuthorDetails h3.authorName a {}
+    div.itemAuthorBlock div.itemAuthorDetails h3.authorName a:hover {}
+    div.itemAuthorBlock div.itemAuthorDetails p {}
+    div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl {}
+    div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail {}
+    div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl a,
+    div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail a {}
+
+/* Author latest */
+div.itemAuthorLatest {}
+    div.itemAuthorLatest h3 {}
+    div.itemAuthorLatest ul {}
+        div.itemAuthorLatest ul li {}
+            div.itemAuthorLatest ul li a {}
+            div.itemAuthorLatest ul li a:hover {}
+
+/* Related by tag */
+div.itemRelated {} /* Add overflow-x:scroll; if you want to enable the scrolling features, as explained in item.php */
+    div.itemRelated h3 {}
+    div.itemRelated ul {}
+        div.itemRelated ul li {}
+        div.itemRelated ul li.k2ScrollerElement {} /* you need to insert this class in the related li element in item.php for this styling to take effect */
+        div.itemRelated ul li.clr {}
+            a.itemRelTitle {}
+            div.itemRelCat {}
+                div.itemRelCat a {}
+            div.itemRelAuthor {}
+                div.itemRelAuthor a {}
+            img.itemRelImg {}
+            div.itemRelIntrotext {}
+            div.itemRelFulltext {}
+            div.itemRelMedia {}
+            div.itemRelImageGallery {}
+
+/* Video */
+div.itemVideoBlock {}
+    div.itemVideoBlock div.itemVideoEmbedded {} /* for embedded videos (not using AllVideos) */
+    div.itemVideoBlock span.itemVideo {}
+    div.itemVideoBlock span.itemVideoCaption {}
+    div.itemVideoBlock span.itemVideoCredits {}
+
+/* Image Gallery */
+div.itemImageGallery {}
+
+/* Article navigation */
+div.itemNavigation {}
+    div.itemNavigation span.itemNavigationTitle {}
+    div.itemNavigation a.itemPrevious {}
+    div.itemNavigation a.itemNext {}
+
+/* Comments */
+div.itemComments {}
+
+    div.itemComments ul.itemCommentsList {}
+    div.itemComments ul.itemCommentsList li {}
+    div.itemComments ul.itemCommentsList li.authorResponse {}
+    div.itemComments ul.itemCommentsList li.unpublishedComment {}
+    div.itemComments ul.itemCommentsList li img {}
+    div.itemComments ul.itemCommentsList li span.commentDate {}
+    div.itemComments ul.itemCommentsList li span.commentAuthorName {}
+    div.itemComments ul.itemCommentsList li p {}
+    div.itemComments ul.itemCommentsList li span.commentAuthorEmail {}
+    div.itemComments ul.itemCommentsList li span.commentLink {}
+    div.itemComments ul.itemCommentsList li span.commentLink a {}
+    div.itemComments ul.itemCommentsList li span.commentLink a:hover {}
+
+    div.itemComments ul.itemCommentsList li span.commentToolbar {}
+    div.itemComments ul.itemCommentsList li span.commentToolbar a {}
+    div.itemComments ul.itemCommentsList li span.commentToolbar a:hover {}
+    div.itemComments ul.itemCommentsList li span.commentToolbarLoading {}
+
+div.itemCommentsPagination {}
+    div.itemCommentsPagination span.pagination {}
+
+div.itemCommentsForm h3 {}
+    div.itemCommentsForm p.itemCommentsFormNotes {}
+    div.itemCommentsForm form {}
+    div.itemCommentsForm form label.formComment {}
+    div.itemCommentsForm form label.formName {}
+    div.itemCommentsForm form label.formEmail {}
+    div.itemCommentsForm form label.formUrl {}
+    div.itemCommentsForm form label.formRecaptcha {}
+    div.itemCommentsForm form textarea.inputbox {}
+    div.itemCommentsForm form input.inputbox {}
+    div.itemCommentsForm form input#submitCommentButton {}
+    div.itemCommentsForm form span#formLog {}
+    div.itemCommentsForm form .formLogLoading {}
+
+/* "Report comment" form */
+div.k2ReportCommentFormContainer {}
+    div.k2ReportCommentFormContainer blockquote {}
+    div.k2ReportCommentFormContainer blockquote span.quoteIconLeft {}
+    div.k2ReportCommentFormContainer blockquote span.quoteIconRight {}
+    div.k2ReportCommentFormContainer blockquote span.theComment {}
+    div.k2ReportCommentFormContainer form label {}
+    div.k2ReportCommentFormContainer form input,
+    div.k2ReportCommentFormContainer form textarea {}
+    div.k2ReportCommentFormContainer form #recaptcha {}
+    div.k2ReportCommentFormContainer form span#formLog {}
+    div.k2ReportCommentFormContainer form .formLogLoading {}
+
+/* Back to top link */
+div.itemBackToTop {}
+    div.itemBackToTop a {}
+    div.itemBackToTop a:hover {}
+
+/*----------------------------------------------------------------------
+    Component: Itemlist view (category)
+----------------------------------------------------------------------*/
+
+div.itemListCategoriesBlock {}
+
+/* --- Category block --- */
+div.itemListCategory {}
+    span.catItemAddLink {}
+    span.catItemAddLink a {}
+    span.catItemAddLink a:hover {}
+    div.itemListCategory img {}
+    div.itemListCategory h2 {}
+    div.itemListCategory p {}
+
+/* --- Sub-category block --- */
+div.itemListSubCategories {}
+    div.itemListSubCategories h3 {}
+        div.subCategoryContainer {}
+        div.subCategoryContainerLast {} /* this class is appended to the last container on each row of items (useful when you want to set 0 padding/margin to the last container) */
+            div.subCategory {}
+                div.subCategory a.subCategoryImage,
+                div.subCategory a.subCategoryImage:hover {}
+                div.subCategory a.subCategoryImage img,
+                div.subCategory a.subCategoryImage:hover img {}
+                div.subCategory h2 {}
+                div.subCategory h2 a {}
+                div.subCategory h2 a:hover {}
+                div.subCategory p {}
+
+/* --- Item groups --- */
+div.itemList {}
+    div#itemListLeading {}
+    div#itemListPrimary {}
+    div#itemListSecondary {}
+    div#itemListLinks {}
+
+        div.itemContainer {}
+        div.itemContainerLast {} /* this class is appended to the last container on each row of items (useful when you want to set 0 padding/margin to the last container) */
+
+/* --- Item block for each item group --- */
+div.catItemView {} /* this is the item container for this view - we add a generic padding so that items don't get stuck with each other */
+
+    /* Additional class appended to the element above for further styling per group item */
+    div.groupLeading {}
+    div.groupPrimary {}
+    div.groupSecondary {}
+    div.groupLinks {}
+
+    div.catItemIsFeatured {} /* Attach a class for each featured item */
+
+span.catItemEditLink {}
+span.catItemEditLink a {}
+span.catItemEditLink a:hover {}
+
+div.catItemHeader {}
+    div.catItemHeader span.catItemDateCreated {}
+    div.catItemHeader h3.catItemTitle {}
+    div.catItemHeader h3.catItemTitle span {}
+    div.catItemHeader h3.catItemTitle span sup {} /* superscript */
+    div.catItemHeader span.catItemAuthor {}
+    div.catItemHeader span.catItemAuthor a {}
+    div.catItemHeader span.catItemAuthor a:hover {}
+
+div.catItemRatingBlock {}
+    div.catItemRatingBlock span {}
+
+div.catItemBody {}
+
+div.catItemImageBlock {}
+    span.catItemImage {}
+    span.catItemImage img {}
+
+div.catItemIntroText {}
+    div.catItemIntroText img {}
+
+div.catItemExtraFields, div.genericItemExtraFields {}
+    div.catItemExtraFields h4, div.genericItemExtraFields h4 {}
+    div.catItemExtraFields ul, div.genericItemExtraFields ul {}
+    div.catItemExtraFields ul li, div.genericItemExtraFields ul li {}
+    div.catItemExtraFields ul li span.extraFieldsLabel, 
+    div.genericItemExtraFields ul li span.extraFieldsLabel {}
+    div.catItemExtraFields ul li span.extraFieldsValue {}
+
+div.catItemLinks {}
+
+div.catItemHitsBlock {}
+    span.catItemHits {}
+
+div.catItemCategory {}
+    div.catItemCategory span {}
+    div.catItemCategory a {}
+
+div.catItemTagsBlock {}
+    div.catItemTagsBlock span {}
+    div.catItemTagsBlock ul.catItemTags {}
+    div.catItemTagsBlock ul.catItemTags li {}
+    div.catItemTagsBlock ul.catItemTags li a {}
+    div.catItemTagsBlock ul.catItemTags li a:hover {}
+
+div.catItemAttachmentsBlock {}
+    div.catItemAttachmentsBlock span {}
+    div.catItemAttachmentsBlock ul.catItemAttachments {}
+    div.catItemAttachmentsBlock ul.catItemAttachments li {}
+    div.catItemAttachmentsBlock ul.catItemAttachments li a {}
+    div.catItemAttachmentsBlock ul.catItemAttachments li a:hover {}
+    div.catItemAttachmentsBlock ul.catItemAttachments li span {}
+
+/* Video */
+div.catItemVideoBlock {}
+    div.catItemVideoBlock div.catItemVideoEmbedded {} /* for embedded videos (not using AllVideos) */
+    div.catItemVideoBlock span.catItemVideo {}
+
+/* Image Gallery */
+div.catItemImageGallery {}
+
+/* Anchor link to comments */
+div.catItemCommentsLink {}
+    div.catItemCommentsLink a {}
+    div.catItemCommentsLink a:hover {}
+
+/* Read more link */
+div.catItemReadMore {}
+    div.catItemReadMore a {}
+    div.catItemReadMore a:hover {}
+
+/* Modified date */
+span.catItemDateModified {}
+
+/*----------------------------------------------------------------------
+    Component: Itemlist view (user)
+----------------------------------------------------------------------*/
+
+/* User info block */
+div.userView {}
+    div.userBlock {}
+
+        span.userItemAddLink {}
+        span.userItemAddLink a {}
+        span.userItemAddLink a:hover {}
+
+        div.userBlock img {}
+        div.userBlock h2 {}
+        div.userBlock div.userDescription {}
+        div.userBlock div.userAdditionalInfo {}
+            span.userURL {}
+            span.userEmail {}
+
+        div.userItemList {}
+
+/* User items */
+div.userItemView {} /* this is the item container for this view */
+div.userItemIsFeatured {} /* Attach a class for each featured item */
+
+div.userItemViewUnpublished {}
+
+span.userItemEditLink {}
+    span.userItemEditLink a {}
+    span.userItemEditLink a:hover {}
+
+div.userItemHeader {}
+    div.userItemHeader span.userItemDateCreated {}
+    div.userItemHeader h3.userItemTitle {}
+    div.userItemHeader h3.userItemTitle span sup {} /* "Unpublished" presented in superscript */
+
+div.userItemBody {}
+
+div.userItemImageBlock {}
+    span.userItemImage {}
+    span.userItemImage img {}
+
+div.userItemIntroText {}
+    div.userItemIntroText img {}
+
+div.userItemLinks {}
+
+div.userItemCategory {}
+    div.userItemCategory span {}
+    div.userItemCategory a {}
+
+div.userItemTagsBlock {}
+    div.userItemTagsBlock span {}
+    div.userItemTagsBlock ul.userItemTags {}
+    div.userItemTagsBlock ul.userItemTags li {}
+    div.userItemTagsBlock ul.userItemTags li a {}
+    div.userItemTagsBlock ul.userItemTags li a:hover {}
+
+/* Anchor link to comments */
+div.userItemCommentsLink {}
+    div.userItemCommentsLink a {}
+    div.userItemCommentsLink a:hover {}
+
+/* Read more link */
+div.userItemReadMore {}
+    div.userItemReadMore a {}
+    div.userItemReadMore a:hover {}
+
+
+/*----------------------------------------------------------------------
+    Component: Itemlist view (tag)
+----------------------------------------------------------------------*/
+div.tagView {}
+
+div.tagItemList {}
+
+div.tagItemView {} /* this is the item container for this view */
+
+div.tagItemHeader {}
+    div.tagItemHeader span.tagItemDateCreated {}
+    div.tagItemHeader h2.tagItemTitle {}
+
+div.tagItemBody {}
+
+div.tagItemImageBlock {}
+    span.tagItemImage {}
+    span.tagItemImage img {}
+
+div.tagItemIntroText {}
+    div.tagItemIntroText img {}
+
+    div.tagItemExtraFields {}
+        div.tagItemExtraFields h4 {}
+        div.tagItemExtraFields ul {}
+            div.tagItemExtraFields ul li {}
+                div.tagItemExtraFields ul li span.extraFieldsLabel {}
+                div.tagItemExtraFields ul li span.extraFieldsValue {}
+
+    div.tagItemCategory {}
+        div.tagItemCategory span {}
+        div.tagItemCategory a {}
+
+/* Read more link */
+div.tagItemReadMore {}
+    div.tagItemReadMore a {}
+    div.tagItemReadMore a:hover {}
+
+/*----------------------------------------------------------------------
+    Component: Itemlist view (generic)
+----------------------------------------------------------------------*/
+div.genericView {}
+
+div.genericItemList {}
+
+div.genericItemView {} /* this is the item container for this view */
+
+div.genericItemHeader {}
+    div.genericItemHeader span.genericItemDateCreated {}
+    div.genericItemHeader h2.genericItemTitle {}
+
+div.genericItemBody {}
+
+div.genericItemImageBlock {}
+    span.genericItemImage {}
+    span.genericItemImage img {}
+
+div.genericItemIntroText {}
+    div.genericItemIntroText img {}
+
+    div.genericItemExtraFields {}
+        div.genericItemExtraFields h4 {}
+        div.genericItemExtraFields ul {}
+            div.genericItemExtraFields ul li {}
+                div.genericItemExtraFields ul li span.extraFieldsLabel {}
+                div.genericItemExtraFields ul li span.extraFieldsValue {}
+
+    div.genericItemCategory {}
+        div.genericItemCategory span {}
+        div.genericItemCategory a {}
+
+/* Read more link */
+div.genericItemReadMore {}
+    div.genericItemReadMore a {}
+    div.genericItemReadMore a:hover {}
+
+/* No results found message */
+div#genericItemListNothingFound {}
+    div#genericItemListNothingFound p {}
+
+/* --- Google Search (use Firebug or similar tools to inspect the generated HTML, then style accordingly --- */
+#k2GoogleSearchContainer .gsc-control {}
+#k2GoogleSearchContainer .gsc-control .gsc-above-wrapper-area,
+#k2GoogleSearchContainer .gsc-control .gsc-resultsHeader,
+#k2GoogleSearchContainer .gsc-control .gsc-url-bottom {} /* Hide unneeded elements of the results page */
+
+
+/*----------------------------------------------------------------------
+    Component: Latest view
+----------------------------------------------------------------------*/
+
+div.latestItemsContainer {}
+
+/* Category info block */
+div.latestItemsCategory {}
+    div.latestItemsCategoryImage {}
+    div.latestItemsCategoryImage img {}
+div.latestItemsCategory h2 {}
+div.latestItemsCategory p {}
+
+/* User info block */
+div.latestItemsUser {}
+    div.latestItemsUser img {}
+    div.latestItemsUser h2 {}
+    div.latestItemsUser p.latestItemsUserDescription {}
+    div.latestItemsUser p.latestItemsUserAdditionalInfo {}
+        span.latestItemsUserURL {}
+        span.latestItemsUserEmail {}
+
+/* Latest items list */
+div.latestItemList {}
+
+div.latestItemView {} /* this is the item container for this view */
+
+div.latestItemHeader {}
+    div.latestItemHeader h3.latestItemTitle {}
+
+span.latestItemDateCreated {}
+
+div.latestItemBody {}
+
+div.latestItemImageBlock {}
+    span.latestItemImage {}
+    span.latestItemImage img {}
+
+div.latestItemIntroText {}
+    div.latestItemIntroText img {}
+
+div.latestItemLinks {}
+
+div.latestItemCategory {}
+    div.latestItemCategory span {}
+    div.latestItemCategory a {}
+
+div.latestItemTagsBlock {}
+    div.latestItemTagsBlock span {}
+    div.latestItemTagsBlock ul.latestItemTags {}
+    div.latestItemTagsBlock ul.latestItemTags li {}
+    div.latestItemTagsBlock ul.latestItemTags li a {}
+    div.latestItemTagsBlock ul.latestItemTags li a:hover {}
+
+/* Video */
+div.latestItemVideoBlock {}
+    div.latestItemVideoBlock span.latestItemVideo {}
+
+/* Anchor link to comments */
+div.latestItemCommentsLink {}
+    div.latestItemCommentsLink a {}
+    div.latestItemCommentsLink a:hover {}
+
+/* Read more link */
+div.latestItemReadMore {}
+    div.latestItemReadMore a {}
+    div.latestItemReadMore a:hover {}
+
+/* Items presented in a list */
+h2.latestItemTitleList {}
+
+
+/*----------------------------------------------------------------------
+	Component: Register & profile page views (register.php & profile.php)
+----------------------------------------------------------------------*/
+.k2AccountPage {}
+.k2AccountPage table {}
+.k2AccountPage table tr th {}
+.k2AccountPage table tr td {}
+.k2AccountPage table tr td label {}
+img.k2AccountPageImage {}
+.k2AccountPage div.k2AccountPageNotice {}
+.k2AccountPage div.k2AccountPageUpdate {}
+
+.k2AccountPage th.k2ProfileHeading {}
+.k2AccountPage td#userAdminParams {}
+.k2AccountPage table.admintable td.key,
+.k2AccountPage table.admintable td.paramlist_key {}
+
+/* Profile edit */
+.k2AccountPage table.admintable {}
+.k2AccountPage table.admintable tr td {}
+.k2AccountPage table.admintable tr td span {}
+.k2AccountPage table.admintable tr td span label {}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_comments
+----------------------------------------------------------------------*/
+
+/* Latest Comments */
+div.k2LatestCommentsBlock {}
+div.k2LatestCommentsBlock ul {}
+div.k2LatestCommentsBlock ul li {}
+div.k2LatestCommentsBlock ul li.lastItem {}
+div.k2LatestCommentsBlock ul li a.lcAvatar img {}
+div.k2LatestCommentsBlock ul li a {}
+div.k2LatestCommentsBlock ul li a:hover {}
+div.k2LatestCommentsBlock ul li span.lcComment {}
+div.k2LatestCommentsBlock ul li span.lcUsername {}
+div.k2LatestCommentsBlock ul li span.lcCommentDate {}
+div.k2LatestCommentsBlock ul li span.lcItemTitle {}
+div.k2LatestCommentsBlock ul li span.lcItemCategory {}
+
+/* Top Commenters */
+div.k2TopCommentersBlock {}
+div.k2TopCommentersBlock ul {}
+div.k2TopCommentersBlock ul li {}
+div.k2TopCommentersBlock ul li.lastItem {}
+div.k2TopCommentersBlock ul li a.tcAvatar img {}
+div.k2TopCommentersBlock ul li a.tcLink {}
+div.k2TopCommentersBlock ul li a.tcLink:hover {}
+div.k2TopCommentersBlock ul li span.tcUsername {}
+div.k2TopCommentersBlock ul li span.tcCommentsCounter {}
+div.k2TopCommentersBlock ul li a.tcLatestComment {}
+div.k2TopCommentersBlock ul li a.tcLatestComment:hover {}
+div.k2TopCommentersBlock ul li span.tcLatestCommentDate {}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_content
+----------------------------------------------------------------------*/
+div.k2ItemsBlock {}
+
+div.k2ItemsBlock p.modulePretext {}
+
+div.k2ItemsBlock ul {}
+div.k2ItemsBlock ul li {}
+div.k2ItemsBlock ul li a {}
+div.k2ItemsBlock ul li a:hover {}
+div.k2ItemsBlock ul li.lastItem {}
+
+div.k2ItemsBlock ul li a.moduleItemTitle {}
+div.k2ItemsBlock ul li a.moduleItemTitle:hover {}
+
+div.k2ItemsBlock ul li div.moduleItemAuthor {}
+div.k2ItemsBlock ul li div.moduleItemAuthor a {}
+div.k2ItemsBlock ul li div.moduleItemAuthor a:hover {}
+
+div.k2ItemsBlock ul li a.moduleItemAuthorAvatar img {}
+
+div.k2ItemsBlock ul li div.moduleItemIntrotext {}
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img {}
+
+div.k2ItemsBlock ul li div.moduleItemExtraFields {}
+	div.moduleItemExtraFields ul {}
+	div.moduleItemExtraFields ul li {}
+	div.moduleItemExtraFields ul li span.moduleItemExtraFieldsLabel {}
+	div.moduleItemExtraFields ul li span.moduleItemExtraFieldsValue {}
+
+div.k2ItemsBlock ul li div.moduleItemVideo {}
+div.k2ItemsBlock ul li div.moduleItemVideo span.moduleItemVideoCaption {}
+div.k2ItemsBlock ul li div.moduleItemVideo span.moduleItemVideoCredits {}
+
+div.k2ItemsBlock ul li span.moduleItemDateCreated {}
+
+div.k2ItemsBlock ul li a.moduleItemCategory {}
+
+div.k2ItemsBlock ul li div.moduleItemTags {}
+div.k2ItemsBlock ul li div.moduleItemTags b {}
+div.k2ItemsBlock ul li div.moduleItemTags a {}
+div.k2ItemsBlock ul li div.moduleItemTags a:hover {}
+
+div.k2ItemsBlock ul li div.moduleAttachments {}
+
+div.k2ItemsBlock ul li a.moduleItemComments {}
+div.k2ItemsBlock ul li a.moduleItemComments:hover {}
+
+div.k2ItemsBlock ul li span.moduleItemHits {}
+
+div.k2ItemsBlock ul li a.moduleItemReadMore {}
+div.k2ItemsBlock ul li a.moduleItemReadMore:hover {}
+
+div.k2ItemsBlock a.moduleCustomLink {}
+div.k2ItemsBlock a.moduleCustomLink:hover {}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_user (mod_k2_login will be removed in v2.6)
+----------------------------------------------------------------------*/
+div.k2LoginBlock {}
+	div.k2LoginBlock p.preText {}
+
+	div.k2LoginBlock fieldset.input {}
+	div.k2LoginBlock fieldset.input p {}
+	div.k2LoginBlock fieldset.input p label {}
+	div.k2LoginBlock fieldset.input p input {}
+	div.k2LoginBlock fieldset.input p#form-login-remember label,
+	div.k2LoginBlock fieldset.input p#form-login-remember input {}
+	div.k2LoginBlock fieldset.input input.button {}
+
+	div.k2LoginBlock ul {}
+	div.k2LoginBlock ul li {}
+
+	div.k2LoginBlock p.postText {}
+
+div.k2UserBlock {}
+	div.k2UserBlock p.ubGreeting {}
+	div.k2UserBlock div.k2UserBlockDetails a.ubAvatar img {}
+	div.k2UserBlock div.k2UserBlockDetails span.ubName {}
+	div.k2UserBlock div.k2UserBlockDetails span.ubCommentsCount {}
+
+	div.k2UserBlock ul.k2UserBlockActions {}
+		div.k2UserBlock ul.k2UserBlockActions li {}
+		div.k2UserBlock ul.k2UserBlockActions li a {}
+		div.k2UserBlock ul.k2UserBlockActions li a:hover {}
+
+	div.k2UserBlock ul.k2UserBlockRenderedMenu {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li a {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li a:hover {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul {} /* 2nd level ul */
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul li {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul li a {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul {} /* 3rd level ul (and so on...) */
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul li {}
+		div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul li a {}
+
+	div.k2UserBlock form {}
+	div.k2UserBlock form input.ubLogout {}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_tools
+----------------------------------------------------------------------*/
+
+/* --- Archives --- */
+div.k2ArchivesBlock {}
+div.k2ArchivesBlock ul {}
+div.k2ArchivesBlock ul li {}
+div.k2ArchivesBlock ul li i {}
+div.k2ArchivesBlock ul li a {}
+div.k2ArchivesBlock ul li a:hover {}
+div.k2ArchivesBlock ul li a span.catTitle {}
+div.k2ArchivesBlock ul li a:hover span.catTitle {}
+div.k2ArchivesBlock ul li a:hover span.catCounter {}
+
+/* --- Authors --- */
+div.k2AuthorsListBlock {}
+div.k2AuthorsListBlock ul {}
+div.k2AuthorsListBlock ul li {}
+div.k2AuthorsListBlock ul li a.abAuthorAvatar img {}
+div.k2AuthorsListBlock ul li a.abAuthorName {}
+div.k2AuthorsListBlock ul li a.abAuthorName:hover {}
+div.k2AuthorsListBlock ul li a.abAuthorLatestItem {}
+div.k2AuthorsListBlock ul li a.abAuthorLatestItem:hover {}
+div.k2AuthorsListBlock ul li span.abAuthorCommentsCount {}
+
+/* --- Breadcrumbs --- */
+div.k2BreadcrumbsBlock {}
+div.k2BreadcrumbsBlock span.bcTitle {}
+div.k2BreadcrumbsBlock a {}
+div.k2BreadcrumbsBlock a:hover {}
+div.k2BreadcrumbsBlock span.bcSeparator {}
+
+/* --- Calendar --- */
+div.k2CalendarBlock {} /* use this height value so that the calendar height won't change on Month change via ajax */
+div.k2CalendarLoader {}
+table.calendar {}
+table.calendar tr td {}
+table.calendar tr td.calendarNavMonthPrev {}
+table.calendar tr td.calendarNavMonthPrev a {}
+table.calendar tr td.calendarNavMonthPrev a:hover {}
+table.calendar tr td.calendarCurrentMonth {}
+table.calendar tr td.calendarNavMonthNext {}
+table.calendar tr td.calendarNavMonthNext a {}
+table.calendar tr td.calendarNavMonthNext a:hover {}
+table.calendar tr td.calendarDayName {}
+table.calendar tr td.calendarDateEmpty {}
+table.calendar tr td.calendarDate {}
+table.calendar tr td.calendarDateLinked {}
+table.calendar tr td.calendarDateLinked a {}
+table.calendar tr td.calendarDateLinked a:hover {}
+table.calendar tr td.calendarToday {}
+table.calendar tr td.calendarTodayLinked {}
+table.calendar tr td.calendarTodayLinked a {}
+table.calendar tr td.calendarTodayLinked a:hover {}
+
+/* --- Category Tree Select Box --- */
+div.k2CategorySelectBlock {}
+div.k2CategorySelectBlock form select {}
+div.k2CategorySelectBlock form select option {}
+
+/* --- Category List/Menu --- */
+div.k2CategoriesListBlock {}
+div.k2CategoriesListBlock ul {}
+div.k2CategoriesListBlock ul li {}
+div.k2CategoriesListBlock ul li:before {}
+div.k2CategoriesListBlock ul li a {}
+div.k2CategoriesListBlock ul li a:hover {}
+div.k2CategoriesListBlock ul li a span.catTitle {}
+div.k2CategoriesListBlock ul li a span.catCounter {}
+div.k2CategoriesListBlock ul li a:hover span.catTitle {}
+div.k2CategoriesListBlock ul li a:hover span.catCounter {}
+div.k2CategoriesListBlock ul li.activeCategory {}
+div.k2CategoriesListBlock ul li.activeCategory a {}
+
+	/* Root level (0) */
+	ul.level0 {}
+	ul.level0 li {}
+	ul.level0 li a {}
+	ul.level0 li a:hover {}
+	ul.level0 li a span {}
+	ul.level0 li a:hover span {}
+
+		/* First level (1) */
+		ul.level1 {}
+		ul.level1 li {}
+		ul.level1 li a {}
+		ul.level1 li a:hover {}
+		ul.level1 li a span {}
+		ul.level1 li a:hover span {}
+
+			/* n level (n) - like the above... */
+
+/* --- Search Box --- */
+div.k2SearchBlock {}
+div.k2SearchBlock form {}
+div.k2SearchBlock form input.inputbox {}
+div.k2SearchBlock form input.button {}
+div.k2SearchBlock form input.k2SearchLoading {}
+div.k2SearchBlock div.k2LiveSearchResults {}
+	/* Live search results (fetched via ajax) */
+	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults {}
+	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li {}
+	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a {}
+	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a:hover {}
+
+/* --- Tag Cloud --- */
+div.k2TagCloudBlock {}
+div.k2TagCloudBlock a {}
+div.k2TagCloudBlock a:hover {}
+
+/* --- Custom Code --- */
+div.k2CustomCodeBlock {}
+
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_users
+----------------------------------------------------------------------*/
+div.k2UsersBlock {}
+div.k2UsersBlock ul {}
+div.k2UsersBlock ul li {}
+div.k2UsersBlock ul li.lastItem {}
+div.k2UsersBlock ul li a.ubUserAvatar img {}
+div.k2UsersBlock ul li a.ubUserName {}
+div.k2UsersBlock ul li a.ubUserName:hover {}
+div.k2UsersBlock ul li div.ubUserDescription {}
+div.k2UsersBlock ul li div.ubUserAdditionalInfo {}
+	a.ubUserFeedIcon,
+	a.ubUserFeedIcon:hover {}
+	a.ubUserFeedIcon span,
+	a.ubUserFeedIcon:hover span {}
+	a.ubUserURL,
+	a.ubUserURL:hover {}
+	a.ubUserURL span,
+	a.ubUserURL:hover span {}
+	span.ubUserEmail {}
+	span.ubUserEmail a {}
+
+div.k2UsersBlock ul li h3 {}
+div.k2UsersBlock ul li ul.ubUserItems {}
+div.k2UsersBlock ul li ul.ubUserItems li {}
+
+
+
+/* --- END --- */
